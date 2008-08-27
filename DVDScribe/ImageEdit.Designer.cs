@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dlgOpenFile = new System.Windows.Forms.OpenFileDialog();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pbxImage = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dlgOpenFile = new System.Windows.Forms.OpenFileDialog();
+            this.pbxImage = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImage)).BeginInit();
             this.SuspendLayout();
@@ -52,6 +52,15 @@
             this.panel1.Size = new System.Drawing.Size(180, 24);
             this.panel1.TabIndex = 1;
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ImageEdit_MouseMove);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(25, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Select image";
             // 
             // button1
             // 
@@ -77,20 +86,11 @@
             this.pbxImage.Location = new System.Drawing.Point(3, 34);
             this.pbxImage.Name = "pbxImage";
             this.pbxImage.Padding = new System.Windows.Forms.Padding(2);
-            this.pbxImage.Size = new System.Drawing.Size(180, 4);
+            this.pbxImage.Size = new System.Drawing.Size(180, 145);
             this.pbxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxImage.TabIndex = 0;
             this.pbxImage.TabStop = false;
             this.pbxImage.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ImageEdit_MouseMove);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Select image";
             // 
             // ImageEdit
             // 
@@ -102,7 +102,7 @@
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "ImageEdit";
-            this.Size = new System.Drawing.Size(186, 41);
+            this.Size = new System.Drawing.Size(186, 182);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ImageEdit_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ImageEdit_MouseUp);
             this.panel1.ResumeLayout(false);

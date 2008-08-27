@@ -60,7 +60,7 @@ namespace DVDScribe
                 this.Cursor = Cursors.SizeNWSE;
                 return SizeDirection.sdDownRight;
             }
-            else if (e.X == 0)
+            else if (e.X < 3)
             {
                 this.Cursor = Cursors.SizeWE;
                 return SizeDirection.sdSizeLeft;
