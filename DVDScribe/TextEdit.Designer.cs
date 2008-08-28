@@ -49,6 +49,7 @@
             this.txtText.Size = new System.Drawing.Size(161, 28);
             this.txtText.TabIndex = 0;
             this.txtText.TextChanged += new System.EventHandler(this.txtText_TextChanged);
+            this.txtText.MultilineChanged += new System.EventHandler(this.txtText_MultilineChanged);
             this.txtText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtText_KeyPress);
             // 
             // button3

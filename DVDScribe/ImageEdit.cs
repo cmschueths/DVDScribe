@@ -50,22 +50,22 @@ namespace DVDScribe
                 this.Cursor = Cursors.SizeNESW;
                 return SizeDirection.sdUpRight;
             }
-            else if (e.X == 0 && e.Y == this.Height - 3)
+            else if (e.X == 0 && e.Y == this.Height - 1)
             {
                 this.Cursor = Cursors.SizeNESW;
                 return SizeDirection.sdDownLeft;
             }
-            else if (e.X == this.Width - 3 && e.Y == this.Height - 3)
+            else if (e.X == this.Width - 3 && e.Y == this.Height - 1)
             {
                 this.Cursor = Cursors.SizeNWSE;
                 return SizeDirection.sdDownRight;
             }
-            else if (e.X < 3)
+            else if (e.X < 1)
             {
                 this.Cursor = Cursors.SizeWE;
                 return SizeDirection.sdSizeLeft;
             }
-            else if (e.X == this.Width - 3)
+            else if (e.X == this.Width - 1)
             {
                 this.Cursor = Cursors.SizeWE;
                 return SizeDirection.sdSizeRight;
@@ -75,7 +75,7 @@ namespace DVDScribe
                 this.Cursor = Cursors.SizeNS;
                 return SizeDirection.sdSizeUp;
             }
-            else if (e.Y == this.Height - 3)
+            else if (e.Y == this.Height - 1)
             {
                 this.Cursor = Cursors.SizeNS;
                 return SizeDirection.sdSizeDown;
@@ -160,6 +160,16 @@ namespace DVDScribe
             {
                 pbxImage.Image = (Bitmap)Bitmap.FromFile(dlgOpenFile.FileName);
             }
+        }
+
+        private void ImageEdit_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, this.ClientRectangle, Color.DarkBlue, ButtonBorderStyle.Dotted);
+        }
+
+        private void ImageEdit_Resize(object sender, EventArgs e)
+        {
+            this.Invalidate();
         }
        
     }

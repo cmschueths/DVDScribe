@@ -28,65 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pnlEdit = new System.Windows.Forms.Panel();
+            this.btnLoadFile = new System.Windows.Forms.Button();
             this.dlgOpenFile = new System.Windows.Forms.OpenFileDialog();
             this.pbxImage = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
+            this.pnlEdit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImage)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnlEdit
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel1.Location = new System.Drawing.Point(3, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(1);
-            this.panel1.Size = new System.Drawing.Size(180, 24);
-            this.panel1.TabIndex = 1;
-            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ImageEdit_MouseMove);
+            this.pnlEdit.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pnlEdit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlEdit.Controls.Add(this.btnLoadFile);
+            this.pnlEdit.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.pnlEdit.Location = new System.Drawing.Point(4, 4);
+            this.pnlEdit.Name = "pnlEdit";
+            this.pnlEdit.Padding = new System.Windows.Forms.Padding(1);
+            this.pnlEdit.Size = new System.Drawing.Size(32, 24);
+            this.pnlEdit.TabIndex = 1;
+            this.pnlEdit.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ImageEdit_MouseMove);
             // 
-            // label1
+            // btnLoadFile
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Select image";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Image = global::DVDScribe.Properties.Resources.open;
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Margin = new System.Windows.Forms.Padding(1);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(20, 16);
-            this.button1.TabIndex = 1;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnLoadFile.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnLoadFile.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnLoadFile.FlatAppearance.BorderSize = 0;
+            this.btnLoadFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoadFile.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLoadFile.Image = global::DVDScribe.Properties.Resources.open;
+            this.btnLoadFile.Location = new System.Drawing.Point(1, 1);
+            this.btnLoadFile.Margin = new System.Windows.Forms.Padding(1);
+            this.btnLoadFile.Name = "btnLoadFile";
+            this.btnLoadFile.Size = new System.Drawing.Size(28, 20);
+            this.btnLoadFile.TabIndex = 1;
+            this.btnLoadFile.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnLoadFile.UseVisualStyleBackColor = false;
+            this.btnLoadFile.Click += new System.EventHandler(this.button1_Click);
             // 
             // pbxImage
             // 
-            this.pbxImage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbxImage.Location = new System.Drawing.Point(3, 34);
+            this.pbxImage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbxImage.Location = new System.Drawing.Point(1, 1);
+            this.pbxImage.Margin = new System.Windows.Forms.Padding(0);
             this.pbxImage.Name = "pbxImage";
-            this.pbxImage.Padding = new System.Windows.Forms.Padding(2);
-            this.pbxImage.Size = new System.Drawing.Size(180, 145);
+            this.pbxImage.Size = new System.Drawing.Size(185, 141);
             this.pbxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxImage.TabIndex = 0;
             this.pbxImage.TabStop = false;
@@ -96,17 +82,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlEdit);
             this.Controls.Add(this.pbxImage);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(1);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "ImageEdit";
-            this.Size = new System.Drawing.Size(186, 182);
+            this.Padding = new System.Windows.Forms.Padding(1);
+            this.Size = new System.Drawing.Size(187, 143);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.ImageEdit_Paint);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ImageEdit_MouseMove);
+            this.Resize += new System.EventHandler(this.ImageEdit_Resize);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ImageEdit_MouseUp);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnlEdit.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxImage)).EndInit();
             this.ResumeLayout(false);
 
@@ -114,11 +101,10 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pbxImage;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel pnlEdit;
+        private System.Windows.Forms.Button btnLoadFile;
         public System.Windows.Forms.OpenFileDialog dlgOpenFile;
-        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.PictureBox pbxImage;
 
     }
 }

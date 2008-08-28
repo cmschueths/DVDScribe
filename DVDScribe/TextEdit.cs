@@ -84,5 +84,10 @@ namespace DVDScribe
                 this.Cursor = Cursors.Default;
             }
         }
+
+        private void txtText_MultilineChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

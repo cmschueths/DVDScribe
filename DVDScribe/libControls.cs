@@ -20,6 +20,7 @@ namespace DVDScribe
             public bool editorVisible = false;
             private bool pSelected = false;
             protected bool pHasBorder = false;
+            protected bool pHide = false;
 
             private int dragStartX;
             private int dragStartY;
@@ -120,6 +121,7 @@ namespace DVDScribe
 
             public override void Paint(Graphics g)
             {
+                if (pHide) return;
                 if (pImage != null)
                 {
                     Rectangle rect = new Rectangle(Location.X, Location.Y, (int)(pImage.Width * pZoomH), (int)(pImage.Height * pZoomV));
@@ -138,6 +140,7 @@ namespace DVDScribe
 
             public override void AddToImage(Graphics g)
             {
+                if (pHide) return;
                 if (pImage != null)
                 {
                     Rectangle rect = new Rectangle(Location.X, Location.Y, (int)(pImage.Width * pZoomH), (int)(pImage.Height * pZoomV));
@@ -153,16 +156,17 @@ namespace DVDScribe
 
             public override void LauchEditor(Control c)
             {
+                pHide = true;
                 if (this.FilePath == "")
                 {
                     this.Editor = new ImageEdit();
                 }
                 else
                 {
-                    this.Editor = new ImageEdit(this.FilePath,new Size(this.Dimention.Width + 3,this.Dimention.Height + 43));
+                    this.Editor = new ImageEdit(this.FilePath,new Size(this.Dimention.Width + 2,this.Dimention.Height + 2));
                 }
                 c.Controls.Add(Editor);
-                Point NewLocation = new Point(this.Location.X - 3, this.Location.Y - 43);
+                Point NewLocation = new Point(this.Location.X - 1, this.Location.Y - 1);
 
                 Editor.Location = NewLocation;
                 editorVisible = true;
@@ -174,8 +178,8 @@ namespace DVDScribe
 
                 this.LoadFromFile(this.FilePath);
 
-                this.Dimention = Editor.Dimentions;
-                this.Location = new Point(Editor.Location.X + 3, Editor.Location.Y + 43);
+                this.Dimention = Editor.pbxImage.Size;
+                this.Location = new Point(Editor.Location.X + 1, Editor.Location.Y + 1);
                 if (pImage != null)
                 {
                     pZoomH = (double)this.Dimention.Width / (double)pImage.Width;
@@ -183,7 +187,7 @@ namespace DVDScribe
                 }                
                 c.Controls.Remove(Editor);
                 editorVisible = false;
-                
+                pHide = false;
                 if (OnChanged != null)
                 {
                     OnChanged();
@@ -270,6 +274,7 @@ namespace DVDScribe
                 Text = Editor.txtText.Text;
                 c.Controls.Remove(Editor);
                 editorVisible = false;
+                pHide = false;
             }
 
             private void EditorClosed(object sender, ControlEventArgs e)
@@ -283,6 +288,7 @@ namespace DVDScribe
                 frmEdit.Location = this.Location;
                 frmEdit.txtText.Font = pFont;
                 frmEdit.txtText.Text = pText;*/
+                pHide = true;
                 this.Editor = new TextEdit(Text,pFont);
                 //this.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.EditorClosed);
                 c.Controls.Add(Editor);
