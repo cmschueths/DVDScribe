@@ -87,7 +87,7 @@ namespace DVDScribe
 
         private void txtText_MultilineChanged(object sender, EventArgs e)
         {
-            
+            txtText.Text = txtText.Text + "\n";
         }
     }
 }
