@@ -64,12 +64,14 @@
             this.tbZoomV = new System.Windows.Forms.TrackBar();
             this.cbxKeepRatio = new System.Windows.Forms.CheckBox();
             this.pbxCanvas = new System.Windows.Forms.PictureBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.msMainMenu.SuspendLayout();
             this.tsQMenu.SuspendLayout();
             this.ssLightScribeState.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbZoom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbZoomV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCanvas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // msMainMenu
@@ -103,39 +105,38 @@
             // 
             this.newToolStripMenuItem.Image = global::DVDScribe.Properties.Resources.gtk_new;
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.newToolStripMenuItem.Text = "New...";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // printToolStripMenuItem
             // 
-            this.printToolStripMenuItem.Image = global::DVDScribe.Properties.Resources.blockdevice;
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.printToolStripMenuItem.Text = "Print";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(115, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(104, 6);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Image = global::DVDScribe.Properties.Resources.gtk_save;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.saveToolStripMenuItem.Text = "Save";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(115, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(104, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Image = global::DVDScribe.Properties.Resources.exit;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // imageToolStripMenuItem
@@ -143,15 +144,14 @@
             this.imageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.selectBackToolStripMenuItem,
             this.editBackgroundToolStripMenuItem});
-            this.imageToolStripMenuItem.Image = global::DVDScribe.Properties.Resources.thumbnail;
             this.imageToolStripMenuItem.Name = "imageToolStripMenuItem";
-            this.imageToolStripMenuItem.Size = new System.Drawing.Size(65, 26);
+            this.imageToolStripMenuItem.Size = new System.Drawing.Size(49, 26);
             this.imageToolStripMenuItem.Text = "Image";
             // 
             // selectBackToolStripMenuItem
             // 
             this.selectBackToolStripMenuItem.Name = "selectBackToolStripMenuItem";
-            this.selectBackToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.selectBackToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.selectBackToolStripMenuItem.Text = "Select image";
             // 
             // editBackgroundToolStripMenuItem
@@ -160,26 +160,25 @@
             this.grayscaleToolStripMenuItem1,
             this.contrastToolStripMenuItem1});
             this.editBackgroundToolStripMenuItem.Name = "editBackgroundToolStripMenuItem";
-            this.editBackgroundToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.editBackgroundToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.editBackgroundToolStripMenuItem.Text = "Image";
             // 
             // grayscaleToolStripMenuItem1
             // 
             this.grayscaleToolStripMenuItem1.Name = "grayscaleToolStripMenuItem1";
-            this.grayscaleToolStripMenuItem1.Size = new System.Drawing.Size(132, 22);
+            this.grayscaleToolStripMenuItem1.Size = new System.Drawing.Size(121, 22);
             this.grayscaleToolStripMenuItem1.Text = "Grayscale";
             // 
             // contrastToolStripMenuItem1
             // 
             this.contrastToolStripMenuItem1.Name = "contrastToolStripMenuItem1";
-            this.contrastToolStripMenuItem1.Size = new System.Drawing.Size(132, 22);
+            this.contrastToolStripMenuItem1.Size = new System.Drawing.Size(121, 22);
             this.contrastToolStripMenuItem1.Text = "Contrast";
             // 
             // aboutToolStripMenuItem
             // 
-            this.aboutToolStripMenuItem.Image = global::DVDScribe.Properties.Resources.khelpcenter;
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(64, 26);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(48, 26);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // tsQMenu
@@ -206,10 +205,9 @@
             // tsbtnOpenFile
             // 
             this.tsbtnOpenFile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnOpenFile.Image = global::DVDScribe.Properties.Resources.folder_image;
             this.tsbtnOpenFile.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnOpenFile.Name = "tsbtnOpenFile";
-            this.tsbtnOpenFile.Size = new System.Drawing.Size(28, 28);
+            this.tsbtnOpenFile.Size = new System.Drawing.Size(23, 28);
             this.tsbtnOpenFile.Text = "toolStripButton1";
             this.tsbtnOpenFile.ToolTipText = "Select background";
             this.tsbtnOpenFile.Click += new System.EventHandler(this.tsbtnOpenFile_Click);
@@ -261,23 +259,22 @@
             this.tsbtnEditOptions.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.grayscaleToolStripMenuItem,
             this.contrastToolStripMenuItem});
-            this.tsbtnEditOptions.Image = global::DVDScribe.Properties.Resources.thumbnail;
             this.tsbtnEditOptions.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnEditOptions.Name = "tsbtnEditOptions";
-            this.tsbtnEditOptions.Size = new System.Drawing.Size(37, 28);
+            this.tsbtnEditOptions.Size = new System.Drawing.Size(13, 28);
             this.tsbtnEditOptions.Text = "toolStripDropDownButton1";
             // 
             // grayscaleToolStripMenuItem
             // 
             this.grayscaleToolStripMenuItem.Name = "grayscaleToolStripMenuItem";
-            this.grayscaleToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.grayscaleToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.grayscaleToolStripMenuItem.Text = "Grayscale";
             this.grayscaleToolStripMenuItem.Click += new System.EventHandler(this.grayscaleToolStripMenuItem_Click);
             // 
             // contrastToolStripMenuItem
             // 
             this.contrastToolStripMenuItem.Name = "contrastToolStripMenuItem";
-            this.contrastToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.contrastToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.contrastToolStripMenuItem.Text = "Contrast";
             this.contrastToolStripMenuItem.Click += new System.EventHandler(this.contrastToolStripMenuItem_Click);
             // 
@@ -307,10 +304,9 @@
             // 
             this.btnImageMode.CheckOnClick = true;
             this.btnImageMode.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnImageMode.Image = global::DVDScribe.Properties.Resources.image;
             this.btnImageMode.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnImageMode.Name = "btnImageMode";
-            this.btnImageMode.Size = new System.Drawing.Size(28, 28);
+            this.btnImageMode.Size = new System.Drawing.Size(23, 28);
             this.btnImageMode.Text = "toolStripButton4";
             this.btnImageMode.Click += new System.EventHandler(this.btnImageMode_Click);
             // 
@@ -407,11 +403,30 @@
             this.pbxCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.pbxCanvas_Paint);
             this.pbxCanvas.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pbxCanvas_MouseUp);
             // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDown1.Location = new System.Drawing.Point(190, 728);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            359,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown1.TabIndex = 8;
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(683, 774);
+            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.cbxKeepRatio);
             this.Controls.Add(this.tbZoomV);
             this.Controls.Add(this.tbZoom);
@@ -434,6 +449,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbZoom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbZoomV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCanvas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -477,6 +493,7 @@
         private System.Windows.Forms.ToolStripButton btnImageMode;
         private System.Windows.Forms.ToolStripStatusLabel lbMode;
         private System.Windows.Forms.ToolStripButton btnDelete;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }
 

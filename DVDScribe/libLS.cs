@@ -78,9 +78,16 @@ namespace DVDScribe
 
         public static bool HasLightScribeDrive()
         {
-            IntPtr pProc = GetProcAddress(LightScribeDll, "haveLSDrive");           
-            haveLSDrive HaveDrive = (haveLSDrive)Marshal.GetDelegateForFunctionPointer(pProc, typeof(haveLSDrive));
-            return HaveDrive();            
+            IntPtr pProc = GetProcAddress(LightScribeDll, "haveLSDrive");
+            try
+            {
+                haveLSDrive HaveDrive = (haveLSDrive)Marshal.GetDelegateForFunctionPointer(pProc, typeof(haveLSDrive));
+                return HaveDrive(); 
+            }
+            catch
+            {
+                return false;
+            }                       
         }
 
         public static int DoPrintPreview(string AFileName)

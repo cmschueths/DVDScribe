@@ -56,7 +56,7 @@
             this.btnLoadFile.FlatAppearance.BorderSize = 0;
             this.btnLoadFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoadFile.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLoadFile.Image = global::DVDScribe.Properties.Resources.open;
+            //this.btnLoadFile.Image = global::DVDScribe.Properties.Resources.open;
             this.btnLoadFile.Location = new System.Drawing.Point(1, 1);
             this.btnLoadFile.Margin = new System.Windows.Forms.Padding(1);
             this.btnLoadFile.Name = "btnLoadFile";

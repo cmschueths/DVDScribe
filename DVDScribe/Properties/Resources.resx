@@ -139,12 +139,6 @@
   <data name="gtk-leave-fullscreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gtk-leave-fullscreen.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="folder_image" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\folder_image.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="gtk-go-forward-ltr" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gtk-go-forward-ltr.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -168,9 +162,6 @@
   </data>
   <data name="filenew" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\filenew.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="thumbnail" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\thumbnail.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="gtk-media-rewind-ltr" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gtk-media-rewind-ltr.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -319,9 +310,6 @@
   <data name="format-justify-fill" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\format-justify-fill.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="colors" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\colors.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="stock_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\stock_left.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -408,9 +396,6 @@
   </data>
   <data name="mail-message-new" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mail-message-new.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="khelpcenter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\khelpcenter.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="document-print-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\document-print-preview.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -570,9 +555,6 @@
   </data>
   <data name="gtk-media-rewind-rtl" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gtk-media-rewind-rtl.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blockdevice" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blockdevice.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tab-new" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tab-new.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -942,8 +924,5 @@
   </data>
   <data name="format-indent-more" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\format-indent-more.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="open" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\open.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

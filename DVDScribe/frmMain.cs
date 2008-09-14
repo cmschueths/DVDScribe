@@ -22,6 +22,8 @@ namespace DVDScribe
         private int StartY = 4;
         private int DeltaX = 0;
         private int DeltaY = 0;
+        private float Angle = 0;
+
         private Mode pMode;
         private Mode CurrentMode
         {
@@ -83,7 +85,7 @@ namespace DVDScribe
             g.DrawEllipse(thickPen, -100, -100, 840, 840);
             g.DrawEllipse(pn, 0, 0, 640, 640);           
             g.DrawEllipse(pn, 192, 192, 256, 256);
-            g.FillEllipse(transBrush, 192, 192, 256, 256);
+            g.FillEllipse(transBrush, 192, 192, 256, 256);            
 
             foreach (libControls.dsControl aControl in dsControls)
             {
@@ -109,6 +111,14 @@ namespace DVDScribe
                 
                 ZoomH = 640.00 / Cover.Width;
                 ZoomV = 640.00 / Cover.Height;
+                if ((int)(ZoomH * 1000) > tbZoom.Maximum)
+                {
+                    tbZoom.Maximum = (int)(ZoomH * 1000);
+                }
+                if ((int)(ZoomV * 1000) > tbZoomV.Maximum)
+                {
+                    tbZoomV.Maximum = (int)(ZoomV * 1000);
+                }
                 tbZoom.Value = (int)(ZoomH * 1000);
                 tbZoomV.Value = (int)(ZoomV * 1000);                
             }
@@ -399,6 +409,14 @@ namespace DVDScribe
         private void btnDelete_Click(object sender, EventArgs e)
         {
             deletedsControlls();
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            
+            Angle = (float)numericUpDown1.Value;
+            Cover = libImage.RotateImage(Cover,Angle);
+            pbxCanvas.Invalidate();
         }
     }
 }

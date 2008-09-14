@@ -64,8 +64,7 @@
             // 
             // btnColor
             // 
-            this.btnColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnColor.Image = global::DVDScribe.Properties.Resources.colors;
+            this.btnColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;            
             this.btnColor.Location = new System.Drawing.Point(190, 2);
             this.btnColor.Name = "btnColor";
             this.btnColor.Size = new System.Drawing.Size(23, 23);

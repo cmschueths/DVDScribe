@@ -116,13 +116,6 @@ namespace DVDScribe.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap blockdevice {
-            get {
-                object obj = ResourceManager.GetObject("blockdevice", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
         internal static System.Drawing.Bitmap bookmark_add {
             get {
                 object obj = ResourceManager.GetObject("bookmark_add", resourceCulture);
@@ -154,13 +147,6 @@ namespace DVDScribe.Properties {
         internal static System.Drawing.Bitmap centrejust {
             get {
                 object obj = ResourceManager.GetObject("centrejust", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap colors {
-            get {
-                object obj = ResourceManager.GetObject("colors", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -413,13 +399,6 @@ namespace DVDScribe.Properties {
         internal static System.Drawing.Bitmap finish {
             get {
                 object obj = ResourceManager.GetObject("finish", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap folder_image {
-            get {
-                object obj = ResourceManager.GetObject("folder_image", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1047,23 +1026,9 @@ namespace DVDScribe.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap image {
-            get {
-                object obj = ResourceManager.GetObject("image", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
         internal static System.Drawing.Bitmap kfm_home {
             get {
                 object obj = ResourceManager.GetObject("kfm_home", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap khelpcenter {
-            get {
-                object obj = ResourceManager.GetObject("khelpcenter", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1218,13 +1183,6 @@ namespace DVDScribe.Properties {
         internal static System.Drawing.Bitmap next {
             get {
                 object obj = ResourceManager.GetObject("next", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap open {
-            get {
-                object obj = ResourceManager.GetObject("open", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1834,13 +1792,6 @@ namespace DVDScribe.Properties {
         internal static System.Drawing.Bitmap text_under {
             get {
                 object obj = ResourceManager.GetObject("text_under", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap thumbnail {
-            get {
-                object obj = ResourceManager.GetObject("thumbnail", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
