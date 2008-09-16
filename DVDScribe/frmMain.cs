@@ -16,13 +16,28 @@ namespace DVDScribe
         private enum Mode { [Description("Drag mode selected")] mDrag,[Description("Text adding mode selected")] mText, [Description("Image adding mode selected")] mImage }
 
         private Bitmap Cover = new Bitmap(640, 640);
+        private Bitmap BufferImage = null;
         private Double ZoomV = 1.0;
         private Double ZoomH = 1.0;
         private int StartX = 4;
         private int StartY = 4;
         private int DeltaX = 0;
         private int DeltaY = 0;
-        private float Angle = 0;
+        private float pAngle;        
+
+        private float Angle
+        {
+            get
+            {
+                return pAngle;
+            }
+            set
+            {
+                pAngle = value;
+                rotateImage(Cover, pAngle);
+                pbxCanvas.Invalidate();
+            }
+        }
 
         private Mode pMode;
         private Mode CurrentMode
@@ -70,14 +85,33 @@ namespace DVDScribe
         {
             pbxCanvas.Invalidate();
         }
+        
+        private void rotateImage(Bitmap b, float angle)
+        {
+            if (b != null)
+            {
+                if (BufferImage == null)
+                {
+                    BufferImage = new Bitmap((int)(b.Width), (int)(b.Height));
+                }
+                Graphics g = Graphics.FromImage(BufferImage);
+                g.TranslateTransform(((float)b.Width / 2) + StartX, ((float)b.Height / 2) + StartY);
+                g.RotateTransform(angle);
+                g.TranslateTransform(-(float)b.Width / 2, -(float)b.Height / 2);
+                Rectangle rect = new Rectangle(0, 0, (int)b.Width, (int)b.Height);
+                g.DrawImage(b, rect);
+            }            
+        }
+
 
         private void pbxCanvas_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
 
-            
+            Bitmap bmp = (BufferImage == null) ? Cover : BufferImage;
+
             Rectangle rect = new Rectangle(StartX, StartY, (int)(Cover.Width * ZoomH), (int)(Cover.Height * ZoomV));
-            g.DrawImage(Cover, rect);
+            g.DrawImage(bmp, rect);
             
             SolidBrush transBrush = new SolidBrush(Color.FromArgb(brushTransparency, 150, 150, 150));            
             Pen pn = new Pen(Color.FromArgb(128, 100, 100, 100));
@@ -85,7 +119,7 @@ namespace DVDScribe
             g.DrawEllipse(thickPen, -100, -100, 840, 840);
             g.DrawEllipse(pn, 0, 0, 640, 640);           
             g.DrawEllipse(pn, 192, 192, 256, 256);
-            g.FillEllipse(transBrush, 192, 192, 256, 256);            
+            g.FillEllipse(transBrush, 192, 192, 256, 256);
 
             foreach (libControls.dsControl aControl in dsControls)
             {
@@ -98,6 +132,8 @@ namespace DVDScribe
             if (MessageBox.Show("Are you sure you want to clear the current image?","New image", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
                 Cover = new Bitmap(640, 640);
+                BufferImage = null;
+                cleardsControls();
                 pbxCanvas.Invalidate();
             }
         }
@@ -253,17 +289,7 @@ namespace DVDScribe
 
         private void tsbtnReset_Click(object sender, EventArgs e)
         {
-           /* if (dlgOpenFile.FileName != "")
-            {
-                Cover = (Bitmap)Bitmap.FromFile(dlgOpenFile.FileName, false);
-                ZoomV = 1.0;
-                ZoomH = 1.0;
-                StartX = 4;
-                StartY = 4;
-                DeltaX = 0;
-                DeltaY = 0;
-                pbxCanvas.Invalidate();
-            }*/
+            resetToBlank();
         }
 
         private void frmMain_Shown(object sender, EventArgs e)
@@ -389,21 +415,28 @@ namespace DVDScribe
 
         private void deletedsControlls()
         {
-            libControls.dsControl fControl = null;
             foreach (libControls.dsControl aControl in dsControls)
             {
                 if (aControl.Selected)
                 {
-                    fControl = aControl;
+                    libControls.dsControl fControl = aControl;
+                    dsControls.Remove(fControl);
+                    fControl = null;
+                    pbxCanvas.Invalidate();
                     break;
                 }
             }
-            if (fControl != null)
-            {
-                dsControls.Remove(fControl);
-                pbxCanvas.Invalidate();
-            }                        
+        }
 
+        private void cleardsControls()
+        {
+            int aCount = 0;
+            while (dsControls.Count > 0)
+            {
+                libControls.dsControl aControl = dsControls[aCount];
+                dsControls.Remove(aControl);
+                aControl = null;
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -413,10 +446,7 @@ namespace DVDScribe
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-            
-            Angle = (float)numericUpDown1.Value;
-            Cover = libImage.RotateImage(Cover,Angle);
-            pbxCanvas.Invalidate();
+            Angle = (float)numericUpDown1.Value;            
         }
     }
 }

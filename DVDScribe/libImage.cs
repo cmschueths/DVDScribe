@@ -277,5 +277,21 @@ namespace DVDScribe
             b = null;
 			return rotatedBmp;
 		}
+
+        public static Bitmap Rotate2(Bitmap Img, float Angle)
+        {
+            float imageRotationAngle = 30.0f;
+            Bitmap i = new Bitmap(Img);
+            Graphics myGraphic  = Graphics.FromImage(i);            
+            Matrix myMatrix = new Matrix();
+            PointF point = new PointF(Img.Width * 0.5f, Img.Height * 0.5f);
+            myMatrix.RotateAt(imageRotationAngle, point, MatrixOrder.Append);
+            myGraphic.Transform = myMatrix;
+            myGraphic.ScaleTransform(0.5f * Img.Size.Width, 0.5f * Img.Size.Height);
+            Rectangle ARect = new Rectangle(new Point(0, 0), Img.Size);
+            myGraphic.DrawImage(Img, ARect);
+
+            return Img;
+        }
     }
 }

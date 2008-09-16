@@ -44,7 +44,7 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsQMenu = new System.Windows.Forms.ToolStrip();
             this.tsbtnOpenFile = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnSave = new System.Windows.Forms.ToolStripButton();
             this.tsbtnReset = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbtnPrintPreview = new System.Windows.Forms.ToolStripButton();
@@ -186,7 +186,7 @@
             this.tsQMenu.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.tsQMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbtnOpenFile,
-            this.toolStripButton1,
+            this.tsbtnSave,
             this.tsbtnReset,
             this.toolStripSeparator2,
             this.tsbtnPrintPreview,
@@ -212,14 +212,14 @@
             this.tsbtnOpenFile.ToolTipText = "Select background";
             this.tsbtnOpenFile.Click += new System.EventHandler(this.tsbtnOpenFile_Click);
             // 
-            // toolStripButton1
+            // tsbtnSave
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::DVDScribe.Properties.Resources.document_save_as;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(28, 28);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.tsbtnSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnSave.Image = global::DVDScribe.Properties.Resources.document_save_as;
+            this.tsbtnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnSave.Name = "tsbtnSave";
+            this.tsbtnSave.Size = new System.Drawing.Size(28, 28);
+            this.tsbtnSave.ToolTipText = "Save image as...";
             // 
             // tsbtnReset
             // 
@@ -229,6 +229,7 @@
             this.tsbtnReset.Name = "tsbtnReset";
             this.tsbtnReset.Size = new System.Drawing.Size(28, 28);
             this.tsbtnReset.Text = "toolStripButton2";
+            this.tsbtnReset.ToolTipText = "Clear current cover...";
             this.tsbtnReset.Click += new System.EventHandler(this.tsbtnReset_Click);
             // 
             // toolStripSeparator2
@@ -287,6 +288,7 @@
             this.btnDragMode.Name = "btnDragMode";
             this.btnDragMode.Size = new System.Drawing.Size(28, 28);
             this.btnDragMode.Text = "toolStripButton2";
+            this.btnDragMode.ToolTipText = "Drag background image...";
             this.btnDragMode.Click += new System.EventHandler(this.btnDragMode_Click);
             // 
             // btnTextMode
@@ -298,6 +300,7 @@
             this.btnTextMode.Name = "btnTextMode";
             this.btnTextMode.Size = new System.Drawing.Size(28, 28);
             this.btnTextMode.Text = "toolStripButton3";
+            this.btnTextMode.ToolTipText = "Add text label...";
             this.btnTextMode.Click += new System.EventHandler(this.btnTextMode_Click);
             // 
             // btnImageMode
@@ -308,6 +311,7 @@
             this.btnImageMode.Name = "btnImageMode";
             this.btnImageMode.Size = new System.Drawing.Size(23, 28);
             this.btnImageMode.Text = "toolStripButton4";
+            this.btnImageMode.ToolTipText = "Add image...";
             this.btnImageMode.Click += new System.EventHandler(this.btnImageMode_Click);
             // 
             // btnDelete
@@ -318,6 +322,7 @@
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(28, 28);
             this.btnDelete.Text = "toolStripButton2";
+            this.btnDelete.ToolTipText = "Delete...";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // ssLightScribeState
@@ -405,11 +410,6 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
             this.numericUpDown1.Location = new System.Drawing.Point(190, 728);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             359,
@@ -486,7 +486,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem grayscaleToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem contrastToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton tsbtnSave;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton btnDragMode;
         private System.Windows.Forms.ToolStripButton btnTextMode;
