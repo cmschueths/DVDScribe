@@ -49,21 +49,21 @@ namespace DVDScribe
             set
             {
                 pMode = value;
-                btnDragMode.Checked = false;
-                btnImageMode.Checked = false;
-                btnTextMode.Checked = false;
+                tsbtnDragMode.Checked = false;
+                tsbtnImageMode.Checked = false;
+                tsbtnTextMode.Checked = false;
                 switch (value)
                 {
                     case Mode.mDrag:
-                        btnDragMode.Checked = true;
+                        tsbtnDragMode.Checked = true;
                         lbMode.Text = Utils.getEnumText(Mode.mDrag);
                         break;
                     case Mode.mImage:
-                        btnImageMode.Checked = true;
+                        tsbtnImageMode.Checked = true;
                         lbMode.Text = Utils.getEnumText(Mode.mImage);
                         break;
                     case Mode.mText:
-                        btnTextMode.Checked = true;
+                        tsbtnTextMode.Checked = true;
                         lbMode.Text = Utils.getEnumText(Mode.mText);
                         break;
                 }
@@ -165,7 +165,7 @@ namespace DVDScribe
             pbxCanvas.Invalidate();
         }
 
-        private void tsbtnOpenFile_Click(object sender, EventArgs e)
+        private void acnNewCover(object sender, EventArgs e)
         {
             SelectBackground();
         }
@@ -287,7 +287,7 @@ namespace DVDScribe
             return AFileName;            
         }
 
-        private void tsbtnReset_Click(object sender, EventArgs e)
+        private void acnResetCover(object sender, EventArgs e)
         {
             resetToBlank();
         }
@@ -311,18 +311,18 @@ namespace DVDScribe
             }
         }
 
-        private void tsbtnPrintPreview_Click(object sender, EventArgs e)
+        private void acnPreview(object sender, EventArgs e)
         {
             libLS.DoPrintPreview(genLightScribeFile());
         }
 
-        private void grayscaleToolStripMenuItem_Click(object sender, EventArgs e)
+        private void acnDoGrayScale(object sender, EventArgs e)
         {
             libImage.GrayScale(Cover);
             pbxCanvas.Invalidate();
         }
 
-        private void contrastToolStripMenuItem_Click(object sender, EventArgs e)
+        private void acnDoCiontrastChange(object sender, EventArgs e)
         {
             using (frmSelectContrast f = new frmSelectContrast()){
                 if (f.ShowDialog() == DialogResult.OK){
@@ -366,17 +366,17 @@ namespace DVDScribe
             }            
         }
 
-        private void btnTextMode_Click(object sender, EventArgs e)
+        private void tsbtnTextMode_Click(object sender, EventArgs e)
         {
             CurrentMode = Mode.mText;
         }
 
-        private void btnDragMode_Click(object sender, EventArgs e)
+        private void tsbtnDragMode_Click(object sender, EventArgs e)
         {
             CurrentMode = Mode.mDrag;
         }
 
-        private void btnImageMode_Click(object sender, EventArgs e)
+        private void tsbtnImageMode_Click(object sender, EventArgs e)
         {
             CurrentMode = Mode.mImage;            
         }
@@ -413,7 +413,7 @@ namespace DVDScribe
             }
         }
 
-        private void deletedsControlls()
+        private void deleteControls()
         {
             foreach (libControls.dsControl aControl in dsControls)
             {
@@ -439,14 +439,22 @@ namespace DVDScribe
             }
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void acnDeleteControl(object sender, EventArgs e)
         {
-            deletedsControlls();
+            deleteControls();
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
             Angle = (float)numericUpDown1.Value;            
+        }
+
+        private void acnExitApplication(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to close DVDScribe?", "Exit application", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

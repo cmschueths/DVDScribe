@@ -75,7 +75,6 @@
             // btnFont
             // 
             this.btnFont.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFont.Image = global::DVDScribe.Properties.Resources.gtk_italic;
             this.btnFont.Location = new System.Drawing.Point(167, 2);
             this.btnFont.Name = "btnFont";
             this.btnFont.Size = new System.Drawing.Size(23, 23);

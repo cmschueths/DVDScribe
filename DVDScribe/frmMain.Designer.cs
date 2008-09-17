@@ -29,6 +29,20 @@
         private void InitializeComponent()
         {
             this.msMainMenu = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
+            this.saveToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripSeparator();
+            this.printToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripSeparator();
+            this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.imgaeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.filterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.grayscaleToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.contrastToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.dVDScribeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,19 +57,25 @@
             this.contrastToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsQMenu = new System.Windows.Forms.ToolStrip();
-            this.tsbtnOpenFile = new System.Windows.Forms.ToolStripButton();
-            this.tsbtnSave = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnNewCover = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnSaveCover = new System.Windows.Forms.ToolStripButton();
             this.tsbtnReset = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnPreview = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbtnImage = new System.Windows.Forms.ToolStripSplitButton();
+            this.grayscaleToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.contrastToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbtnDragMode = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnTextMode = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnImageMode = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbtnDelete = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsbtnPrintPreview = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbtnEditOptions = new System.Windows.Forms.ToolStripDropDownButton();
             this.grayscaleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contrastToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnDragMode = new System.Windows.Forms.ToolStripButton();
-            this.btnTextMode = new System.Windows.Forms.ToolStripButton();
-            this.btnImageMode = new System.Windows.Forms.ToolStripButton();
-            this.btnDelete = new System.Windows.Forms.ToolStripButton();
             this.ssLightScribeState = new System.Windows.Forms.StatusStrip();
             this.tsSoftwareState = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsDriveState = new System.Windows.Forms.ToolStripStatusLabel();
@@ -63,28 +83,131 @@
             this.tbZoom = new System.Windows.Forms.TrackBar();
             this.tbZoomV = new System.Windows.Forms.TrackBar();
             this.cbxKeepRatio = new System.Windows.Forms.CheckBox();
-            this.pbxCanvas = new System.Windows.Forms.PictureBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.pbxCanvas = new System.Windows.Forms.PictureBox();
             this.msMainMenu.SuspendLayout();
             this.tsQMenu.SuspendLayout();
-            this.ssLightScribeState.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbZoom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbZoomV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxCanvas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxCanvas)).BeginInit();
             this.SuspendLayout();
             // 
             // msMainMenu
             // 
             this.msMainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dVDScribeToolStripMenuItem,
-            this.imageToolStripMenuItem,
-            this.aboutToolStripMenuItem});
+            this.fileToolStripMenuItem,
+            this.imgaeToolStripMenuItem,
+            this.aboutToolStripMenuItem1});
             this.msMainMenu.Location = new System.Drawing.Point(0, 0);
             this.msMainMenu.Name = "msMainMenu";
-            this.msMainMenu.Size = new System.Drawing.Size(683, 30);
+            this.msMainMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.msMainMenu.Size = new System.Drawing.Size(683, 24);
             this.msMainMenu.TabIndex = 0;
             this.msMainMenu.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newToolStripMenuItem1,
+            this.toolStripMenuItem3,
+            this.saveToolStripMenuItem1,
+            this.saveAsToolStripMenuItem,
+            this.toolStripMenuItem4,
+            this.printToolStripMenuItem1,
+            this.toolStripMenuItem5,
+            this.exitToolStripMenuItem1});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(35, 20);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // newToolStripMenuItem1
+            // 
+            this.newToolStripMenuItem1.Image = global::DVDScribe.Properties.Resources.img_new;
+            this.newToolStripMenuItem1.Name = "newToolStripMenuItem1";
+            this.newToolStripMenuItem1.Size = new System.Drawing.Size(124, 22);
+            this.newToolStripMenuItem1.Text = "New...";
+            this.newToolStripMenuItem1.Click += new System.EventHandler(this.acnNewCover);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(121, 6);
+            // 
+            // saveToolStripMenuItem1
+            // 
+            this.saveToolStripMenuItem1.Image = global::DVDScribe.Properties.Resources.img_save;
+            this.saveToolStripMenuItem1.Name = "saveToolStripMenuItem1";
+            this.saveToolStripMenuItem1.Size = new System.Drawing.Size(124, 22);
+            this.saveToolStripMenuItem1.Text = "Save";
+            // 
+            // saveAsToolStripMenuItem
+            // 
+            this.saveAsToolStripMenuItem.Image = global::DVDScribe.Properties.Resources.img_save_as;
+            this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.saveAsToolStripMenuItem.Text = "Save as...";
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(121, 6);
+            // 
+            // printToolStripMenuItem1
+            // 
+            this.printToolStripMenuItem1.Image = global::DVDScribe.Properties.Resources.img_preview;
+            this.printToolStripMenuItem1.Name = "printToolStripMenuItem1";
+            this.printToolStripMenuItem1.Size = new System.Drawing.Size(124, 22);
+            this.printToolStripMenuItem1.Text = "Print";
+            this.printToolStripMenuItem1.Click += new System.EventHandler(this.acnPreview);
+            // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(121, 6);
+            // 
+            // exitToolStripMenuItem1
+            // 
+            this.exitToolStripMenuItem1.Image = global::DVDScribe.Properties.Resources.img_exit;
+            this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
+            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(124, 22);
+            this.exitToolStripMenuItem1.Text = "Exit";
+            this.exitToolStripMenuItem1.Click += new System.EventHandler(this.acnExitApplication);
+            // 
+            // imgaeToolStripMenuItem
+            // 
+            this.imgaeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.filterToolStripMenuItem});
+            this.imgaeToolStripMenuItem.Name = "imgaeToolStripMenuItem";
+            this.imgaeToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.imgaeToolStripMenuItem.Text = "Image";
+            // 
+            // filterToolStripMenuItem
+            // 
+            this.filterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.grayscaleToolStripMenuItem2,
+            this.contrastToolStripMenuItem2});
+            this.filterToolStripMenuItem.Name = "filterToolStripMenuItem";
+            this.filterToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.filterToolStripMenuItem.Text = "Filter";
+            // 
+            // grayscaleToolStripMenuItem2
+            // 
+            this.grayscaleToolStripMenuItem2.Name = "grayscaleToolStripMenuItem2";
+            this.grayscaleToolStripMenuItem2.Size = new System.Drawing.Size(121, 22);
+            this.grayscaleToolStripMenuItem2.Text = "Grayscale";
+            // 
+            // contrastToolStripMenuItem2
+            // 
+            this.contrastToolStripMenuItem2.Name = "contrastToolStripMenuItem2";
+            this.contrastToolStripMenuItem2.Size = new System.Drawing.Size(121, 22);
+            this.contrastToolStripMenuItem2.Text = "Contrast";
+            // 
+            // aboutToolStripMenuItem1
+            // 
+            this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
+            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(48, 20);
+            this.aboutToolStripMenuItem1.Text = "About";
             // 
             // dVDScribeToolStripMenuItem
             // 
@@ -95,15 +218,13 @@
             this.saveToolStripMenuItem,
             this.toolStripMenuItem2,
             this.exitToolStripMenuItem});
-            this.dVDScribeToolStripMenuItem.Image = global::DVDScribe.Properties.Resources.drive_optical;
             this.dVDScribeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.dVDScribeToolStripMenuItem.Name = "dVDScribeToolStripMenuItem";
-            this.dVDScribeToolStripMenuItem.Size = new System.Drawing.Size(90, 26);
+            this.dVDScribeToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.dVDScribeToolStripMenuItem.Text = "DVDScribe";
             // 
             // newToolStripMenuItem
             // 
-            this.newToolStripMenuItem.Image = global::DVDScribe.Properties.Resources.gtk_new;
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
             this.newToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.newToolStripMenuItem.Text = "New...";
@@ -122,7 +243,6 @@
             // 
             // saveToolStripMenuItem
             // 
-            this.saveToolStripMenuItem.Image = global::DVDScribe.Properties.Resources.gtk_save;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.saveToolStripMenuItem.Text = "Save";
@@ -134,7 +254,6 @@
             // 
             // exitToolStripMenuItem
             // 
-            this.exitToolStripMenuItem.Image = global::DVDScribe.Properties.Resources.exit;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.exitToolStripMenuItem.Text = "Exit";
@@ -145,7 +264,7 @@
             this.selectBackToolStripMenuItem,
             this.editBackgroundToolStripMenuItem});
             this.imageToolStripMenuItem.Name = "imageToolStripMenuItem";
-            this.imageToolStripMenuItem.Size = new System.Drawing.Size(49, 26);
+            this.imageToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.imageToolStripMenuItem.Text = "Image";
             // 
             // selectBackToolStripMenuItem
@@ -178,76 +297,156 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(48, 26);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // tsQMenu
             // 
+            this.tsQMenu.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.tsQMenu.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.tsQMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbtnOpenFile,
-            this.tsbtnSave,
+            this.tsbtnNewCover,
+            this.tsbtnSaveCover,
             this.tsbtnReset,
-            this.toolStripSeparator2,
-            this.tsbtnPrintPreview,
-            this.toolStripSeparator1,
-            this.tsbtnEditOptions,
-            this.btnDragMode,
-            this.btnTextMode,
-            this.btnImageMode,
-            this.btnDelete});
-            this.tsQMenu.Location = new System.Drawing.Point(0, 30);
+            this.tsbtnPreview,
+            this.toolStripSeparator3,
+            this.tsbtnImage,
+            this.toolStripSeparator4,
+            this.tsbtnDragMode,
+            this.tsbtnTextMode,
+            this.tsbtnImageMode,
+            this.toolStripSeparator5,
+            this.tsbtnDelete});
+            this.tsQMenu.Location = new System.Drawing.Point(0, 24);
             this.tsQMenu.Name = "tsQMenu";
+            this.tsQMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.tsQMenu.Size = new System.Drawing.Size(683, 31);
             this.tsQMenu.TabIndex = 1;
             this.tsQMenu.Text = "toolStrip1";
             // 
-            // tsbtnOpenFile
+            // tsbtnNewCover
             // 
-            this.tsbtnOpenFile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnOpenFile.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnOpenFile.Name = "tsbtnOpenFile";
-            this.tsbtnOpenFile.Size = new System.Drawing.Size(23, 28);
-            this.tsbtnOpenFile.Text = "toolStripButton1";
-            this.tsbtnOpenFile.ToolTipText = "Select background";
-            this.tsbtnOpenFile.Click += new System.EventHandler(this.tsbtnOpenFile_Click);
+            this.tsbtnNewCover.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnNewCover.Image = global::DVDScribe.Properties.Resources.img_new;
+            this.tsbtnNewCover.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnNewCover.Name = "tsbtnNewCover";
+            this.tsbtnNewCover.Size = new System.Drawing.Size(28, 28);
+            this.tsbtnNewCover.ToolTipText = "Create new cover";
+            this.tsbtnNewCover.Click += new System.EventHandler(this.acnNewCover);
             // 
-            // tsbtnSave
+            // tsbtnSaveCover
             // 
-            this.tsbtnSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnSave.Image = global::DVDScribe.Properties.Resources.document_save_as;
-            this.tsbtnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnSave.Name = "tsbtnSave";
-            this.tsbtnSave.Size = new System.Drawing.Size(28, 28);
-            this.tsbtnSave.ToolTipText = "Save image as...";
+            this.tsbtnSaveCover.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnSaveCover.Image = global::DVDScribe.Properties.Resources.img_save;
+            this.tsbtnSaveCover.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnSaveCover.Name = "tsbtnSaveCover";
+            this.tsbtnSaveCover.Size = new System.Drawing.Size(28, 28);
             // 
             // tsbtnReset
             // 
             this.tsbtnReset.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnReset.Image = global::DVDScribe.Properties.Resources.view_refresh;
+            this.tsbtnReset.Image = global::DVDScribe.Properties.Resources.img_refresh;
             this.tsbtnReset.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnReset.Name = "tsbtnReset";
             this.tsbtnReset.Size = new System.Drawing.Size(28, 28);
-            this.tsbtnReset.Text = "toolStripButton2";
-            this.tsbtnReset.ToolTipText = "Clear current cover...";
-            this.tsbtnReset.Click += new System.EventHandler(this.tsbtnReset_Click);
+            this.tsbtnReset.Click += new System.EventHandler(this.acnResetCover);
+            // 
+            // tsbtnPreview
+            // 
+            this.tsbtnPreview.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnPreview.Image = global::DVDScribe.Properties.Resources.img_preview;
+            this.tsbtnPreview.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnPreview.Name = "tsbtnPreview";
+            this.tsbtnPreview.Size = new System.Drawing.Size(28, 28);
+            this.tsbtnPreview.Click += new System.EventHandler(this.acnPreview);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 31);
+            // 
+            // tsbtnImage
+            // 
+            this.tsbtnImage.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnImage.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.grayscaleToolStripMenuItem3,
+            this.contrastToolStripMenuItem3});
+            this.tsbtnImage.Image = global::DVDScribe.Properties.Resources.img_editimage;
+            this.tsbtnImage.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnImage.Name = "tsbtnImage";
+            this.tsbtnImage.Size = new System.Drawing.Size(40, 28);
+            this.tsbtnImage.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            // 
+            // grayscaleToolStripMenuItem3
+            // 
+            this.grayscaleToolStripMenuItem3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.grayscaleToolStripMenuItem3.Name = "grayscaleToolStripMenuItem3";
+            this.grayscaleToolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
+            this.grayscaleToolStripMenuItem3.Text = "Grayscale";
+            this.grayscaleToolStripMenuItem3.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            this.grayscaleToolStripMenuItem3.Click += new System.EventHandler(this.acnDoGrayScale);
+            // 
+            // contrastToolStripMenuItem3
+            // 
+            this.contrastToolStripMenuItem3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.contrastToolStripMenuItem3.Name = "contrastToolStripMenuItem3";
+            this.contrastToolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
+            this.contrastToolStripMenuItem3.Text = "Contrast";
+            this.contrastToolStripMenuItem3.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            this.contrastToolStripMenuItem3.Click += new System.EventHandler(this.acnDoCiontrastChange);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 31);
+            // 
+            // tsbtnDragMode
+            // 
+            this.tsbtnDragMode.Checked = true;
+            this.tsbtnDragMode.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.tsbtnDragMode.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnDragMode.Image = global::DVDScribe.Properties.Resources.img_drag;
+            this.tsbtnDragMode.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnDragMode.Name = "tsbtnDragMode";
+            this.tsbtnDragMode.Size = new System.Drawing.Size(28, 28);
+            this.tsbtnDragMode.Click += new System.EventHandler(this.tsbtnDragMode_Click);
+            // 
+            // tsbtnTextMode
+            // 
+            this.tsbtnTextMode.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnTextMode.Image = global::DVDScribe.Properties.Resources.img_text_edit;
+            this.tsbtnTextMode.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnTextMode.Name = "tsbtnTextMode";
+            this.tsbtnTextMode.Size = new System.Drawing.Size(28, 28);
+            this.tsbtnTextMode.Click += new System.EventHandler(this.tsbtnTextMode_Click);
+            // 
+            // tsbtnImageMode
+            // 
+            this.tsbtnImageMode.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnImageMode.Image = global::DVDScribe.Properties.Resources.img_image_add;
+            this.tsbtnImageMode.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnImageMode.Name = "tsbtnImageMode";
+            this.tsbtnImageMode.Size = new System.Drawing.Size(28, 28);
+            this.tsbtnImageMode.Click += new System.EventHandler(this.tsbtnImageMode_Click);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 31);
+            // 
+            // tsbtnDelete
+            // 
+            this.tsbtnDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnDelete.Image = global::DVDScribe.Properties.Resources.img_delete;
+            this.tsbtnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnDelete.Name = "tsbtnDelete";
+            this.tsbtnDelete.Size = new System.Drawing.Size(28, 28);
+            this.tsbtnDelete.Click += new System.EventHandler(this.acnDeleteControl);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 31);
-            // 
-            // tsbtnPrintPreview
-            // 
-            this.tsbtnPrintPreview.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnPrintPreview.Image = global::DVDScribe.Properties.Resources.document_print_preview;
-            this.tsbtnPrintPreview.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnPrintPreview.Name = "tsbtnPrintPreview";
-            this.tsbtnPrintPreview.Size = new System.Drawing.Size(28, 28);
-            this.tsbtnPrintPreview.Text = "toolStripButton3";
-            this.tsbtnPrintPreview.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.tsbtnPrintPreview.ToolTipText = "Print preview";
-            this.tsbtnPrintPreview.Click += new System.EventHandler(this.tsbtnPrintPreview_Click);
             // 
             // toolStripSeparator1
             // 
@@ -270,67 +469,17 @@
             this.grayscaleToolStripMenuItem.Name = "grayscaleToolStripMenuItem";
             this.grayscaleToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.grayscaleToolStripMenuItem.Text = "Grayscale";
-            this.grayscaleToolStripMenuItem.Click += new System.EventHandler(this.grayscaleToolStripMenuItem_Click);
+            this.grayscaleToolStripMenuItem.Click += new System.EventHandler(this.acnDoGrayScale);
             // 
             // contrastToolStripMenuItem
             // 
             this.contrastToolStripMenuItem.Name = "contrastToolStripMenuItem";
             this.contrastToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.contrastToolStripMenuItem.Text = "Contrast";
-            this.contrastToolStripMenuItem.Click += new System.EventHandler(this.contrastToolStripMenuItem_Click);
-            // 
-            // btnDragMode
-            // 
-            this.btnDragMode.CheckOnClick = true;
-            this.btnDragMode.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnDragMode.Image = global::DVDScribe.Properties.Resources.stock_fullscreen;
-            this.btnDragMode.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnDragMode.Name = "btnDragMode";
-            this.btnDragMode.Size = new System.Drawing.Size(28, 28);
-            this.btnDragMode.Text = "toolStripButton2";
-            this.btnDragMode.ToolTipText = "Drag background image...";
-            this.btnDragMode.Click += new System.EventHandler(this.btnDragMode_Click);
-            // 
-            // btnTextMode
-            // 
-            this.btnTextMode.CheckOnClick = true;
-            this.btnTextMode.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnTextMode.Image = global::DVDScribe.Properties.Resources.format_text_bold;
-            this.btnTextMode.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnTextMode.Name = "btnTextMode";
-            this.btnTextMode.Size = new System.Drawing.Size(28, 28);
-            this.btnTextMode.Text = "toolStripButton3";
-            this.btnTextMode.ToolTipText = "Add text label...";
-            this.btnTextMode.Click += new System.EventHandler(this.btnTextMode_Click);
-            // 
-            // btnImageMode
-            // 
-            this.btnImageMode.CheckOnClick = true;
-            this.btnImageMode.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnImageMode.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnImageMode.Name = "btnImageMode";
-            this.btnImageMode.Size = new System.Drawing.Size(23, 28);
-            this.btnImageMode.Text = "toolStripButton4";
-            this.btnImageMode.ToolTipText = "Add image...";
-            this.btnImageMode.Click += new System.EventHandler(this.btnImageMode_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnDelete.Image = global::DVDScribe.Properties.Resources.gtk_delete;
-            this.btnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(28, 28);
-            this.btnDelete.Text = "toolStripButton2";
-            this.btnDelete.ToolTipText = "Delete...";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.contrastToolStripMenuItem.Click += new System.EventHandler(this.acnDoCiontrastChange);
             // 
             // ssLightScribeState
             // 
-            this.ssLightScribeState.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsSoftwareState,
-            this.tsDriveState,
-            this.lbMode});
             this.ssLightScribeState.Location = new System.Drawing.Point(0, 752);
             this.ssLightScribeState.Name = "ssLightScribeState";
             this.ssLightScribeState.Size = new System.Drawing.Size(683, 22);
@@ -338,16 +487,14 @@
             // 
             // tsSoftwareState
             // 
-            this.tsSoftwareState.Image = global::DVDScribe.Properties.Resources.dialog_cancel;
             this.tsSoftwareState.Name = "tsSoftwareState";
-            this.tsSoftwareState.Size = new System.Drawing.Size(16, 17);
+            this.tsSoftwareState.Size = new System.Drawing.Size(0, 17);
             this.tsSoftwareState.Visible = false;
             // 
             // tsDriveState
             // 
-            this.tsDriveState.Image = global::DVDScribe.Properties.Resources.dialog_cancel;
             this.tsDriveState.Name = "tsDriveState";
-            this.tsDriveState.Size = new System.Drawing.Size(16, 17);
+            this.tsDriveState.Size = new System.Drawing.Size(0, 17);
             this.tsDriveState.Visible = false;
             // 
             // lbMode
@@ -392,6 +539,19 @@
             this.cbxKeepRatio.Text = "Keep ratio";
             this.cbxKeepRatio.UseVisualStyleBackColor = true;
             // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(190, 728);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            359,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown1.TabIndex = 8;
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            // 
             // pbxCanvas
             // 
             this.pbxCanvas.BackColor = System.Drawing.Color.White;
@@ -407,19 +567,6 @@
             this.pbxCanvas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbxCanvas_MouseDown);
             this.pbxCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.pbxCanvas_Paint);
             this.pbxCanvas.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pbxCanvas_MouseUp);
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(190, 728);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            359,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 8;
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // frmMain
             // 
@@ -444,12 +591,10 @@
             this.msMainMenu.PerformLayout();
             this.tsQMenu.ResumeLayout(false);
             this.tsQMenu.PerformLayout();
-            this.ssLightScribeState.ResumeLayout(false);
-            this.ssLightScribeState.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbZoom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbZoomV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxCanvas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxCanvas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -468,9 +613,6 @@
         private System.Windows.Forms.ToolStripMenuItem editBackgroundToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStrip tsQMenu;
-        private System.Windows.Forms.ToolStripButton tsbtnOpenFile;
-        private System.Windows.Forms.ToolStripButton tsbtnReset;
-        private System.Windows.Forms.ToolStripButton tsbtnPrintPreview;
         private System.Windows.Forms.StatusStrip ssLightScribeState;
         private System.Windows.Forms.PictureBox pbxCanvas;
         private System.Windows.Forms.TrackBar tbZoom;
@@ -485,15 +627,38 @@
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem grayscaleToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem contrastToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripButton tsbtnSave;
+        private System.Windows.Forms.ToolStripMenuItem contrastToolStripMenuItem1;       
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton btnDragMode;
-        private System.Windows.Forms.ToolStripButton btnTextMode;
-        private System.Windows.Forms.ToolStripButton btnImageMode;
         private System.Windows.Forms.ToolStripStatusLabel lbMode;
-        private System.Windows.Forms.ToolStripButton btnDelete;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem imgaeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem filterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem grayscaleToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem contrastToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripButton tsbtnNewCover;
+        private System.Windows.Forms.ToolStripButton tsbtnSaveCover;
+        private System.Windows.Forms.ToolStripButton tsbtnReset;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripSplitButton tsbtnImage;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripButton tsbtnPreview;
+        private System.Windows.Forms.ToolStripButton tsbtnDragMode;
+        private System.Windows.Forms.ToolStripButton tsbtnTextMode;
+        private System.Windows.Forms.ToolStripButton tsbtnImageMode;
+        private System.Windows.Forms.ToolStripMenuItem grayscaleToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem contrastToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripButton tsbtnDelete;
     }
 }
 

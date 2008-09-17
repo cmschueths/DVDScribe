@@ -45,22 +45,22 @@
             this.pnlEdit.Location = new System.Drawing.Point(4, 4);
             this.pnlEdit.Name = "pnlEdit";
             this.pnlEdit.Padding = new System.Windows.Forms.Padding(1);
-            this.pnlEdit.Size = new System.Drawing.Size(32, 24);
+            this.pnlEdit.Size = new System.Drawing.Size(23, 20);
             this.pnlEdit.TabIndex = 1;
             this.pnlEdit.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ImageEdit_MouseMove);
             // 
             // btnLoadFile
             // 
             this.btnLoadFile.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnLoadFile.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnLoadFile.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnLoadFile.FlatAppearance.BorderSize = 0;
             this.btnLoadFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoadFile.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            //this.btnLoadFile.Image = global::DVDScribe.Properties.Resources.open;
-            this.btnLoadFile.Location = new System.Drawing.Point(1, 1);
+            this.btnLoadFile.Image = global::DVDScribe.Properties.Resources.img_add_image;
+            this.btnLoadFile.Location = new System.Drawing.Point(1, -2);
             this.btnLoadFile.Margin = new System.Windows.Forms.Padding(1);
             this.btnLoadFile.Name = "btnLoadFile";
-            this.btnLoadFile.Size = new System.Drawing.Size(28, 20);
+            this.btnLoadFile.Size = new System.Drawing.Size(19, 19);
             this.btnLoadFile.TabIndex = 1;
             this.btnLoadFile.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnLoadFile.UseVisualStyleBackColor = false;
