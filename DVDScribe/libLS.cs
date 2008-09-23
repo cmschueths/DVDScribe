@@ -73,7 +73,10 @@ namespace DVDScribe
             if (GetDllLocation() != "")
                 return true;
             else
+            {
+                throw new DllNotFound("LightScribe Libraries not found");
                 return false;
+            }                
         }
 
         public static bool HasLightScribeDrive()
@@ -91,21 +94,21 @@ namespace DVDScribe
         }
 
         public static int DoPrintPreview(string AFileName)
-        {            
-            IntPtr pProc = GetProcAddress(LightScribeDll, "launchPrintOptions");
-            PrintPreview OnPrintPreview = (PrintPreview)Marshal.GetDelegateForFunctionPointer(pProc, typeof(PrintPreview));
-
+        {
             string arguments = string.Format("--filename \"{0}\"  --deleteImageFile 1", AFileName);
-
             IntPtr args = Marshal.StringToHGlobalUni(arguments);
             try
             {
+                IntPtr pProc = GetProcAddress(LightScribeDll, "launchPrintOptions");
+                PrintPreview OnPrintPreview = (PrintPreview)Marshal.GetDelegateForFunctionPointer(pProc, typeof(PrintPreview));
+
                 return OnPrintPreview(args);
             }
             finally
             {
                 Marshal.FreeHGlobal(args);
             }
+            return -1;
         }
     }
 }

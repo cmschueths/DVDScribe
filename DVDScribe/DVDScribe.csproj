@@ -57,6 +57,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmBackgroundAngle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBackgroundAngle.Designer.cs">
+      <DependentUpon>frmBackgroundAngle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBackgroundResize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBackgroundResize.Designer.cs">
+      <DependentUpon>frmBackgroundResize.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +106,14 @@
     <Compile Include="NativeCalls.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmBackgroundAngle.resx">
+      <DependentUpon>frmBackgroundAngle.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBackgroundResize.resx">
+      <DependentUpon>frmBackgroundResize.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
       <SubType>Designer</SubType>

@@ -313,7 +313,18 @@ namespace DVDScribe
 
         private void acnPreview(object sender, EventArgs e)
         {
-            libLS.DoPrintPreview(genLightScribeFile());
+            try
+            {
+                libLS.DoPrintPreview(genLightScribeFile());
+            }
+            catch (System.ArgumentNullException ArgEx)
+            {                
+                MessageBox.Show("Preview failed, LightScribe library not found.", "LightScribe Library Error.", MessageBoxButtons.OK);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(String.Format("Unexpected error, %s",ex.Message),"DVDScribe Error",MessageBoxButtons.OK);
+            }            
         }
 
         private void acnDoGrayScale(object sender, EventArgs e)
