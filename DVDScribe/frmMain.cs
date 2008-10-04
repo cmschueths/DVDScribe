@@ -147,7 +147,8 @@ namespace DVDScribe
                 
                 ZoomH = 640.00 / Cover.Width;
                 ZoomV = 640.00 / Cover.Height;
-                if ((int)(ZoomH * 1000) > tbZoom.Maximum)
+                // ToDo: Remove this dead code
+/*                if ((int)(ZoomH * 1000) > tbZoom.Maximum)
                 {
                     tbZoom.Maximum = (int)(ZoomH * 1000);
                 }
@@ -157,6 +158,7 @@ namespace DVDScribe
                 }
                 tbZoom.Value = (int)(ZoomH * 1000);
                 tbZoomV.Value = (int)(ZoomV * 1000);                
+ */
             }
             else
             {
@@ -168,16 +170,6 @@ namespace DVDScribe
         private void acnNewCover(object sender, EventArgs e)
         {
             SelectBackground();
-        }
-
-        private void tbZoom_ValueChanged(object sender, EventArgs e)
-        {
-            ZoomH = (tbZoom.Value * 0.001);
-            if (cbxKeepRatio.Checked)
-            {
-                tbZoomV.Value = tbZoom.Value;
-            }
-            pbxCanvas.Invalidate();
         }
 
         private void pbxCanvas_MouseMove(object sender, MouseEventArgs e)
@@ -345,22 +337,6 @@ namespace DVDScribe
             }            
         }
 
-        private void tbZoomH_ValueChanged(object sender, EventArgs e)
-        {
-            ZoomV = (tbZoomV.Value * 0.001);            
-            if (cbxKeepRatio.Checked)
-            {
-                tbZoom.Value = tbZoomV.Value;
-            }
-            pbxCanvas.Invalidate();
-        }
-
-        private void frmMain_Load(object sender, EventArgs e)
-        {
-            tbZoom.Value = 1536;
-            tbZoomV.Value = 1590;                        
-        }
-
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
             resetToBlank();
@@ -466,6 +442,23 @@ namespace DVDScribe
             {
                 Application.Exit();
             }
+        }
+
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        // This is where the refactoring starts for the Zooming of the background image.
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        private void OnBackgroundZoomChanged(int HZoomValue, int VZoomValue)
+        {
+            ZoomH = (HZoomValue * 0.001);
+            ZoomV = (VZoomValue * 0.001);
+            pbxCanvas.Invalidate();
+        }
+
+        private void zoomBackgroundToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBackgroundResize frmResizeBackground = new frmBackgroundResize((int)(ZoomH * 1000), (int)(ZoomV * 1000), OnBackgroundZoomChanged);
+            frmResizeBackground.Show();
         }
     }
 }
