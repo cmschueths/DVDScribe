@@ -1,0 +1,4 @@
+Version 0.0.0.1
+===============
+	*	This is the initial release.
+	*	No issues has been addressed in this version.

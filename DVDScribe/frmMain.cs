@@ -23,7 +23,8 @@ namespace DVDScribe
         private int StartY = 4;
         private int DeltaX = 0;
         private int DeltaY = 0;
-        private float pAngle;        
+        private float pAngle;
+        private string CurrentCoverPath = "";
 
         private float Angle
         {
@@ -138,6 +139,7 @@ namespace DVDScribe
                 BufferImage = null;
                 cleardsControls();
                 pbxCanvas.Invalidate();
+                CurrentCoverPath = "";
             }
         }
 
@@ -146,8 +148,8 @@ namespace DVDScribe
             frmSelectBackground f = new frmSelectBackground();
             if (f.ShowDialog() == DialogResult.OK)
             {
-                Cover = (Bitmap)Bitmap.FromFile(f.SelectedFile, false);
-                
+                Cover = (Bitmap)Bitmap.FromFile(f.SelectedFile, false);                
+
                 ZoomH = 640.00 / Cover.Width;
                 ZoomV = 640.00 / Cover.Height;
             }
@@ -270,6 +272,30 @@ namespace DVDScribe
 
             b.Save(AFileName, System.Drawing.Imaging.ImageFormat.Bmp);
             return AFileName;            
+        }
+
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        // ToDo: This section needs reworking
+        //       Serious refactoring is required here
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        private void genSavedFile(string AFileName)
+        {
+            Bitmap b = new Bitmap(640, 640);
+            b.MakeTransparent(Color.White);
+
+            Graphics g = Graphics.FromImage(b);
+
+            Bitmap bmp = (BufferImage == null) ? Cover : BufferImage;
+
+            g.DrawImage(bmp, new Rectangle(StartX, StartY, (int)(Cover.Width * ZoomH), (int)(Cover.Height * ZoomV)));
+            foreach (libControls.dsControl aControl in dsControls)
+            {
+                aControl.AddToImage(g);
+            }
+            //string AFileName = Path.GetTempFileName() + ".bmp";
+
+            b.Save(AFileName, System.Drawing.Imaging.ImageFormat.Jpeg);            
         }
 
         private void acnResetCover(object sender, EventArgs e)
@@ -462,6 +488,28 @@ namespace DVDScribe
         {
             frmBackgroundAngle frmRotateBackGround = new frmBackgroundAngle(Angle, OnBackgroundAngleChanged);
             frmRotateBackGround.Show();
+        }
+
+        private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmAbout frmAboutBox = new frmAbout();
+            frmAboutBox.ShowDialog();
+        }
+
+        private void tsbtnSaveCover_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(CurrentCoverPath))
+            {
+                if (dlgSaveFile.ShowDialog() == DialogResult.OK)
+                {
+                    CurrentCoverPath = dlgSaveFile.FileName;
+                }
+                else
+                {
+                    return;
+                }
+            }
+            genSavedFile(CurrentCoverPath);
         }
 
     }
