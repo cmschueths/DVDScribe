@@ -77,6 +77,9 @@ namespace DVDScribe
         public frmMain()
         {
             InitializeComponent();
+            frmSplash frmSplashScreen = new frmSplash();
+            frmSplashScreen.ShowDialog();
+
             dsControls = new List<libControls.dsControl>();
             CurrentMode = Mode.mDrag;
         }
@@ -112,19 +115,19 @@ namespace DVDScribe
 
             Rectangle rect = new Rectangle(StartX, StartY, (int)(Cover.Width * ZoomH), (int)(Cover.Height * ZoomV));
             g.DrawImage(bmp, rect);
-            
+
+            foreach (libControls.dsControl aControl in dsControls)
+            {
+                aControl.Paint(g);
+            }   
+
             SolidBrush transBrush = new SolidBrush(Color.FromArgb(brushTransparency, 150, 150, 150));            
             Pen pn = new Pen(Color.FromArgb(128, 100, 100, 100));
             Pen thickPen = new Pen(transBrush,200);
             g.DrawEllipse(thickPen, -100, -100, 840, 840);
             g.DrawEllipse(pn, 0, 0, 640, 640);           
             g.DrawEllipse(pn, 192, 192, 256, 256);
-            g.FillEllipse(transBrush, 192, 192, 256, 256);
-
-            foreach (libControls.dsControl aControl in dsControls)
-            {
-                aControl.Paint(g);
-            }                      
+            g.FillEllipse(transBrush, 192, 192, 256, 256);                               
         }
 
         private void resetToBlank()

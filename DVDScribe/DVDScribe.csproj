@@ -57,6 +57,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSplash.Designer.cs">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBackgroundAngle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,10 @@
     <Compile Include="NativeCalls.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmSplash.resx">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBackgroundAngle.resx">
       <DependentUpon>frmBackgroundAngle.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -223,6 +233,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\img_add_image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_rotate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_zoom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

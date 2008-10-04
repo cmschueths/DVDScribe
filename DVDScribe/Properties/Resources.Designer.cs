@@ -116,6 +116,13 @@ namespace DVDScribe.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap img_logo {
+            get {
+                object obj = ResourceManager.GetObject("img_logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap img_new {
             get {
                 object obj = ResourceManager.GetObject("img_new", resourceCulture);
@@ -137,6 +144,13 @@ namespace DVDScribe.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap img_rotate {
+            get {
+                object obj = ResourceManager.GetObject("img_rotate", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap img_save {
             get {
                 object obj = ResourceManager.GetObject("img_save", resourceCulture);
@@ -154,6 +168,13 @@ namespace DVDScribe.Properties {
         internal static System.Drawing.Bitmap img_text_edit {
             get {
                 object obj = ResourceManager.GetObject("img_text_edit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap img_zoom {
+            get {
+                object obj = ResourceManager.GetObject("img_zoom", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
