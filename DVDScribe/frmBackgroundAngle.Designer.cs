@@ -77,6 +77,7 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmBackgroundAngle";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Background angle";
             this.TopMost = true;
             this.groupBox1.ResumeLayout(false);
