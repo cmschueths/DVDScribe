@@ -65,6 +65,8 @@
             this.tsbtnImage = new System.Windows.Forms.ToolStripSplitButton();
             this.grayscaleToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.contrastToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.zoomBackgroundToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rotateBackgroundToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbtnDragMode = new System.Windows.Forms.ToolStripButton();
             this.tsbtnTextMode = new System.Windows.Forms.ToolStripButton();
@@ -80,13 +82,9 @@
             this.tsSoftwareState = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsDriveState = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbMode = new System.Windows.Forms.ToolStripStatusLabel();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.pbxCanvas = new System.Windows.Forms.PictureBox();
-            this.zoomBackgroundToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rotateBackgroundToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msMainMenu.SuspendLayout();
             this.tsQMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCanvas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -380,7 +378,7 @@
             // 
             this.grayscaleToolStripMenuItem3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.grayscaleToolStripMenuItem3.Name = "grayscaleToolStripMenuItem3";
-            this.grayscaleToolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
+            this.grayscaleToolStripMenuItem3.Size = new System.Drawing.Size(177, 22);
             this.grayscaleToolStripMenuItem3.Text = "Grayscale";
             this.grayscaleToolStripMenuItem3.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.grayscaleToolStripMenuItem3.Click += new System.EventHandler(this.acnDoGrayScale);
@@ -389,10 +387,24 @@
             // 
             this.contrastToolStripMenuItem3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.contrastToolStripMenuItem3.Name = "contrastToolStripMenuItem3";
-            this.contrastToolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
+            this.contrastToolStripMenuItem3.Size = new System.Drawing.Size(177, 22);
             this.contrastToolStripMenuItem3.Text = "Contrast";
             this.contrastToolStripMenuItem3.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.contrastToolStripMenuItem3.Click += new System.EventHandler(this.acnDoCiontrastChange);
+            // 
+            // zoomBackgroundToolStripMenuItem
+            // 
+            this.zoomBackgroundToolStripMenuItem.Name = "zoomBackgroundToolStripMenuItem";
+            this.zoomBackgroundToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.zoomBackgroundToolStripMenuItem.Text = "Zoom background";
+            this.zoomBackgroundToolStripMenuItem.Click += new System.EventHandler(this.zoomBackgroundToolStripMenuItem_Click);
+            // 
+            // rotateBackgroundToolStripMenuItem
+            // 
+            this.rotateBackgroundToolStripMenuItem.Name = "rotateBackgroundToolStripMenuItem";
+            this.rotateBackgroundToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.rotateBackgroundToolStripMenuItem.Text = "Rotate background";
+            this.rotateBackgroundToolStripMenuItem.Click += new System.EventHandler(this.rotateBackgroundToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 
@@ -502,19 +514,6 @@
             this.lbMode.Size = new System.Drawing.Size(59, 17);
             this.lbMode.Text = "Drag mode";
             // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(12, 688);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            359,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 8;
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
-            // 
             // pbxCanvas
             // 
             this.pbxCanvas.BackColor = System.Drawing.Color.White;
@@ -531,25 +530,11 @@
             this.pbxCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.pbxCanvas_Paint);
             this.pbxCanvas.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pbxCanvas_MouseUp);
             // 
-            // zoomBackgroundToolStripMenuItem
-            // 
-            this.zoomBackgroundToolStripMenuItem.Name = "zoomBackgroundToolStripMenuItem";
-            this.zoomBackgroundToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.zoomBackgroundToolStripMenuItem.Text = "Zoom background";
-            this.zoomBackgroundToolStripMenuItem.Click += new System.EventHandler(this.zoomBackgroundToolStripMenuItem_Click);
-            // 
-            // rotateBackgroundToolStripMenuItem
-            // 
-            this.rotateBackgroundToolStripMenuItem.Name = "rotateBackgroundToolStripMenuItem";
-            this.rotateBackgroundToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.rotateBackgroundToolStripMenuItem.Text = "Rotate background";
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(666, 735);
-            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.pbxCanvas);
             this.Controls.Add(this.ssLightScribeState);
             this.Controls.Add(this.tsQMenu);
@@ -563,7 +548,6 @@
             this.msMainMenu.PerformLayout();
             this.tsQMenu.ResumeLayout(false);
             this.tsQMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCanvas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -597,7 +581,6 @@
         private System.Windows.Forms.ToolStripMenuItem contrastToolStripMenuItem1;       
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripStatusLabel lbMode;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;

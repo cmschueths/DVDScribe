@@ -147,18 +147,6 @@ namespace DVDScribe
                 
                 ZoomH = 640.00 / Cover.Width;
                 ZoomV = 640.00 / Cover.Height;
-                // ToDo: Remove this dead code
-/*                if ((int)(ZoomH * 1000) > tbZoom.Maximum)
-                {
-                    tbZoom.Maximum = (int)(ZoomH * 1000);
-                }
-                if ((int)(ZoomV * 1000) > tbZoomV.Maximum)
-                {
-                    tbZoomV.Maximum = (int)(ZoomV * 1000);
-                }
-                tbZoom.Value = (int)(ZoomH * 1000);
-                tbZoomV.Value = (int)(ZoomV * 1000);                
- */
             }
             else
             {
@@ -431,11 +419,6 @@ namespace DVDScribe
             deleteControls();
         }
 
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
-            Angle = (float)numericUpDown1.Value;            
-        }
-
         private void acnExitApplication(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you sure you want to close DVDScribe?", "Exit application", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -460,5 +443,21 @@ namespace DVDScribe
             frmBackgroundResize frmResizeBackground = new frmBackgroundResize((int)(ZoomH * 1000), (int)(ZoomV * 1000), OnBackgroundZoomChanged);
             frmResizeBackground.Show();
         }
+
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        // This is where the refactoring starts for the Rotation of the background image.
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        private void OnBackgroundAngleChanged(float AAngle)
+        {
+            Angle = AAngle;
+        }
+
+        private void rotateBackgroundToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBackgroundAngle frmRotateBackGround = new frmBackgroundAngle(Angle, OnBackgroundAngleChanged);
+            frmRotateBackGround.Show();
+        }
+
     }
 }

@@ -34,7 +34,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tbrVZoom = new System.Windows.Forms.TrackBar();
-            this.btnDone = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbrHZoom)).BeginInit();
@@ -104,19 +103,9 @@
             this.tbrVZoom.TickFrequency = 100;
             this.tbrVZoom.ValueChanged += new System.EventHandler(this.OnTrackbarValuesChanged);
             // 
-            // btnDone
-            // 
-            this.btnDone.Location = new System.Drawing.Point(265, 177);
-            this.btnDone.Name = "btnDone";
-            this.btnDone.Size = new System.Drawing.Size(75, 23);
-            this.btnDone.TabIndex = 1;
-            this.btnDone.Text = "Done";
-            this.btnDone.UseVisualStyleBackColor = true;
-            this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
-            // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(184, 177);
+            this.btnReset.Location = new System.Drawing.Point(275, 174);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(75, 23);
             this.btnReset.TabIndex = 2;
@@ -128,9 +117,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(353, 208);
+            this.ClientSize = new System.Drawing.Size(353, 200);
             this.Controls.Add(this.btnReset);
-            this.Controls.Add(this.btnDone);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmBackgroundResize";
@@ -154,7 +142,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TrackBar tbrVZoom;
         private System.Windows.Forms.CheckBox cbxRatio;
-        private System.Windows.Forms.Button btnDone;
         private System.Windows.Forms.Button btnReset;
     }
 }

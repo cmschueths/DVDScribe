@@ -29,9 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.edtAngle = new System.Windows.Forms.NumericUpDown();
-            this.btnDone = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.edtAngle)).BeginInit();
             this.SuspendLayout();
@@ -48,6 +47,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Angle";
             // 
+            // edtAngle
+            // 
+            this.edtAngle.Location = new System.Drawing.Point(53, 18);
+            this.edtAngle.Maximum = new decimal(new int[] {
+            359,
+            0,
+            0,
+            0});
+            this.edtAngle.Name = "edtAngle";
+            this.edtAngle.Size = new System.Drawing.Size(155, 20);
+            this.edtAngle.TabIndex = 1;
+            this.edtAngle.ValueChanged += new System.EventHandler(this.edtAngle_ValueChanged);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -57,32 +69,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Angle";
             // 
-            // edtAngle
-            // 
-            this.edtAngle.Location = new System.Drawing.Point(53, 18);
-            this.edtAngle.Name = "edtAngle";
-            this.edtAngle.Size = new System.Drawing.Size(155, 20);
-            this.edtAngle.TabIndex = 1;
-            // 
-            // btnDone
-            // 
-            this.btnDone.Location = new System.Drawing.Point(133, 59);
-            this.btnDone.Name = "btnDone";
-            this.btnDone.Size = new System.Drawing.Size(75, 23);
-            this.btnDone.TabIndex = 1;
-            this.btnDone.Text = "Done";
-            this.btnDone.UseVisualStyleBackColor = true;
-            // 
             // frmBackgroundAngle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(217, 93);
-            this.Controls.Add(this.btnDone);
+            this.ClientSize = new System.Drawing.Size(217, 56);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmBackgroundAngle";
             this.Text = "Background angle";
+            this.TopMost = true;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.edtAngle)).EndInit();
@@ -95,6 +91,5 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.NumericUpDown edtAngle;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnDone;
     }
 }

@@ -64,10 +64,5 @@ namespace DVDScribe
             tbrHZoom.Value = StartHValue;
             tbrVZoom.Value = StartVValue;
         }
-
-        private void btnDone_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
 }
