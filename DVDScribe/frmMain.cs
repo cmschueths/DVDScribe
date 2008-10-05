@@ -256,22 +256,13 @@ namespace DVDScribe
 
         private string genLightScribeFile()
         {
-            Bitmap b = new Bitmap(640,640);
-            b.MakeTransparent(Color.White);
-           
-            Graphics g = Graphics.FromImage(b);
-
-            Bitmap bmp = (BufferImage == null) ? Cover : BufferImage;
-
-            g.DrawImage(bmp, new Rectangle(StartX, StartY, (int)(Cover.Width * ZoomH), (int)(Cover.Height * ZoomV)));
-            foreach (libControls.dsControl aControl in dsControls)
-            {
-                aControl.AddToImage(g);
-            }
-            string AFileName = Path.GetTempFileName() + ".bmp";            
-
-            b.Save(AFileName, System.Drawing.Imaging.ImageFormat.Bmp);
-            return AFileName;            
+            libFile.CoverFileArgs Args = new libFile.CoverFileArgs();
+            Args.Image = (BufferImage == null) ? Cover : BufferImage;
+            Args.dsControls = dsControls;
+            Args.Location = new Point(StartX, StartY);
+            Args.HZoom = ZoomH;
+            Args.VZoom = ZoomV;
+            return libFile.GenTempFile(Args);              
         }
 
         // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

@@ -115,6 +115,7 @@
       <DependentUpon>ImageEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="libControls.cs" />
+    <Compile Include="libFile.cs" />
     <Compile Include="libImage.cs" />
     <Compile Include="libLS.cs" />
     <Compile Include="LSCover.cs" />
