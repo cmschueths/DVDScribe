@@ -74,6 +74,13 @@ namespace DVDScribe.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap img_color {
+            get {
+                object obj = ResourceManager.GetObject("img_color", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap img_delete {
             get {
                 object obj = ResourceManager.GetObject("img_delete", resourceCulture);

@@ -64,6 +64,7 @@
             this.tsSoftwareState = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsDriveState = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbMode = new System.Windows.Forms.ToolStripStatusLabel();
+            this.dlgSaveFile = new System.Windows.Forms.SaveFileDialog();
             this.pbxCanvas = new System.Windows.Forms.PictureBox();
             this.tsbtnNewCover = new System.Windows.Forms.ToolStripButton();
             this.tsbtnSaveCover = new System.Windows.Forms.ToolStripButton();
@@ -85,7 +86,6 @@
             this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.zoomBackgroundToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.rotateBackgroundToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.dlgSaveFile = new System.Windows.Forms.SaveFileDialog();
             this.msMainMenu.SuspendLayout();
             this.tsQMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCanvas)).BeginInit();
@@ -395,6 +395,7 @@
             this.tsbtnSaveCover.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnSaveCover.Name = "tsbtnSaveCover";
             this.tsbtnSaveCover.Size = new System.Drawing.Size(28, 28);
+            this.tsbtnSaveCover.ToolTipText = "Save image as...";
             this.tsbtnSaveCover.Click += new System.EventHandler(this.tsbtnSaveCover_Click);
             // 
             // tsbtnReset
@@ -404,6 +405,7 @@
             this.tsbtnReset.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnReset.Name = "tsbtnReset";
             this.tsbtnReset.Size = new System.Drawing.Size(28, 28);
+            this.tsbtnReset.ToolTipText = "Clear cover and start again";
             this.tsbtnReset.Click += new System.EventHandler(this.acnResetCover);
             // 
             // tsbtnPreview
@@ -413,6 +415,7 @@
             this.tsbtnPreview.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnPreview.Name = "tsbtnPreview";
             this.tsbtnPreview.Size = new System.Drawing.Size(28, 28);
+            this.tsbtnPreview.ToolTipText = "Print LightScribe cover";
             this.tsbtnPreview.Click += new System.EventHandler(this.acnPreview);
             // 
             // tsbtnImage
@@ -428,12 +431,13 @@
             this.tsbtnImage.Name = "tsbtnImage";
             this.tsbtnImage.Size = new System.Drawing.Size(40, 28);
             this.tsbtnImage.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            this.tsbtnImage.ToolTipText = "Background image options";
             // 
             // grayscaleToolStripMenuItem3
             // 
             this.grayscaleToolStripMenuItem3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.grayscaleToolStripMenuItem3.Name = "grayscaleToolStripMenuItem3";
-            this.grayscaleToolStripMenuItem3.Size = new System.Drawing.Size(177, 22);
+            this.grayscaleToolStripMenuItem3.Size = new System.Drawing.Size(185, 30);
             this.grayscaleToolStripMenuItem3.Text = "Grayscale";
             this.grayscaleToolStripMenuItem3.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.grayscaleToolStripMenuItem3.Click += new System.EventHandler(this.acnDoGrayScale);
@@ -442,7 +446,7 @@
             // 
             this.contrastToolStripMenuItem3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.contrastToolStripMenuItem3.Name = "contrastToolStripMenuItem3";
-            this.contrastToolStripMenuItem3.Size = new System.Drawing.Size(177, 22);
+            this.contrastToolStripMenuItem3.Size = new System.Drawing.Size(185, 30);
             this.contrastToolStripMenuItem3.Text = "Contrast";
             this.contrastToolStripMenuItem3.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.contrastToolStripMenuItem3.Click += new System.EventHandler(this.acnDoCiontrastChange);
@@ -451,7 +455,7 @@
             // 
             this.zoomBackgroundToolStripMenuItem.Image = global::DVDScribe.Properties.Resources.img_zoom;
             this.zoomBackgroundToolStripMenuItem.Name = "zoomBackgroundToolStripMenuItem";
-            this.zoomBackgroundToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.zoomBackgroundToolStripMenuItem.Size = new System.Drawing.Size(185, 30);
             this.zoomBackgroundToolStripMenuItem.Text = "Zoom background";
             this.zoomBackgroundToolStripMenuItem.Click += new System.EventHandler(this.zoomBackgroundToolStripMenuItem_Click);
             // 
@@ -459,7 +463,7 @@
             // 
             this.rotateBackgroundToolStripMenuItem.Image = global::DVDScribe.Properties.Resources.img_rotate;
             this.rotateBackgroundToolStripMenuItem.Name = "rotateBackgroundToolStripMenuItem";
-            this.rotateBackgroundToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.rotateBackgroundToolStripMenuItem.Size = new System.Drawing.Size(185, 30);
             this.rotateBackgroundToolStripMenuItem.Text = "Rotate background";
             this.rotateBackgroundToolStripMenuItem.Click += new System.EventHandler(this.rotateBackgroundToolStripMenuItem_Click);
             // 
@@ -472,6 +476,7 @@
             this.tsbtnDragMode.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnDragMode.Name = "tsbtnDragMode";
             this.tsbtnDragMode.Size = new System.Drawing.Size(28, 28);
+            this.tsbtnDragMode.ToolTipText = "Background drag mode selected";
             this.tsbtnDragMode.Click += new System.EventHandler(this.tsbtnDragMode_Click);
             // 
             // tsbtnTextMode
@@ -481,6 +486,7 @@
             this.tsbtnTextMode.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnTextMode.Name = "tsbtnTextMode";
             this.tsbtnTextMode.Size = new System.Drawing.Size(28, 28);
+            this.tsbtnTextMode.ToolTipText = "Add text mode selected";
             this.tsbtnTextMode.Click += new System.EventHandler(this.tsbtnTextMode_Click);
             // 
             // tsbtnImageMode
@@ -490,6 +496,7 @@
             this.tsbtnImageMode.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnImageMode.Name = "tsbtnImageMode";
             this.tsbtnImageMode.Size = new System.Drawing.Size(28, 28);
+            this.tsbtnImageMode.ToolTipText = "Add new image mode selected";
             this.tsbtnImageMode.Click += new System.EventHandler(this.tsbtnImageMode_Click);
             // 
             // tsbtnDelete
@@ -499,6 +506,7 @@
             this.tsbtnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnDelete.Name = "tsbtnDelete";
             this.tsbtnDelete.Size = new System.Drawing.Size(28, 28);
+            this.tsbtnDelete.ToolTipText = "Delete currently selected control";
             this.tsbtnDelete.Click += new System.EventHandler(this.acnDeleteControl);
             // 
             // newToolStripMenuItem1

@@ -254,7 +254,7 @@ namespace DVDScribe
             DeltaY = e.Y;
         }
 
-        private string genLightScribeFile()
+        private libFile.CoverFileArgs getStandardArgs()
         {
             libFile.CoverFileArgs Args = new libFile.CoverFileArgs();
             Args.Image = (BufferImage == null) ? Cover : BufferImage;
@@ -262,6 +262,12 @@ namespace DVDScribe
             Args.Location = new Point(StartX, StartY);
             Args.HZoom = ZoomH;
             Args.VZoom = ZoomV;
+            return Args; 
+        }
+
+        private string genLightScribeFile()
+        {
+            libFile.CoverFileArgs Args = getStandardArgs();
             return libFile.GenTempFile(Args);              
         }
 
@@ -272,21 +278,12 @@ namespace DVDScribe
 
         private void genSavedFile(string AFileName)
         {
-            Bitmap b = new Bitmap(640, 640);
-            b.MakeTransparent(Color.White);
+            libFile.CoverFileArgs Args = getStandardArgs();
+            Args.FileName = AFileName;
 
-            Graphics g = Graphics.FromImage(b);
-
-            Bitmap bmp = (BufferImage == null) ? Cover : BufferImage;
-
-            g.DrawImage(bmp, new Rectangle(StartX, StartY, (int)(Cover.Width * ZoomH), (int)(Cover.Height * ZoomV)));
-            foreach (libControls.dsControl aControl in dsControls)
-            {
-                aControl.AddToImage(g);
-            }
-            //string AFileName = Path.GetTempFileName() + ".bmp";
-
-            b.Save(AFileName, System.Drawing.Imaging.ImageFormat.Jpeg);            
+            // ToDo: Get file type as arg from dialog
+            Args.FileFormat = System.Drawing.Imaging.ImageFormat.Jpeg;
+            libFile.GenFile(Args);
         }
 
         private void acnResetCover(object sender, EventArgs e)
