@@ -79,7 +79,7 @@ namespace DVDScribe
         {
             InitializeComponent();
             frmSplash frmSplashScreen = new frmSplash();
-            frmSplashScreen.ShowDialog();
+            //frmSplashScreen.ShowDialog();
 
             dsControls = new List<libControls.dsControl>();
             CurrentMode = Mode.mDrag;
@@ -328,15 +328,20 @@ namespace DVDScribe
 
         private void acnDoGrayScale(object sender, EventArgs e)
         {
-            libImage.GrayScale(Cover);
-            pbxCanvas.Invalidate();
+            using (frmGrayscalePreview f = new frmGrayscalePreview(Cover)){
+                if (f.ShowDialog() == DialogResult.OK)
+                {
+                    libImage.GrayScale(Cover);
+                    pbxCanvas.Invalidate();
+                }
+            }
         }
 
         private void acnDoCiontrastChange(object sender, EventArgs e)
         {
-            using (frmSelectContrast f = new frmSelectContrast()){
+            using (frmContrastPreview f = new frmContrastPreview(Cover)){
                 if (f.ShowDialog() == DialogResult.OK){
-                    if (libImage.SetContrast(Cover, (sbyte)f.edtValue.Value))
+                    if (libImage.SetContrast(Cover, (sbyte)f.tbLevel.Value))
                     {
                         pbxCanvas.Invalidate();
                     }

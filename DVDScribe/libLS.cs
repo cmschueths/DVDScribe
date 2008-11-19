@@ -74,8 +74,7 @@ namespace DVDScribe
                 return true;
             else
             {
-                throw new DllNotFound("LightScribe Libraries not found");
-                return false;
+                throw new DllNotFound("LightScribe Libraries not found");                
             }                
         }
 

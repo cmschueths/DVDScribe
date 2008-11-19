@@ -34,7 +34,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lv = new System.Windows.Forms.ListView();
             this.splitter1 = new System.Windows.Forms.Splitter();
-            this.tvDirectory = new System.Windows.Forms.TreeView();
+            this.expBrowser = new WindowsExplorer.ExplorerTree();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +53,7 @@
             // 
             this.groupBox1.Controls.Add(this.lv);
             this.groupBox1.Controls.Add(this.splitter1);
-            this.groupBox1.Controls.Add(this.tvDirectory);
+            this.groupBox1.Controls.Add(this.expBrowser);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
@@ -65,35 +65,37 @@
             // 
             // lv
             // 
-            this.lv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lv.Location = new System.Drawing.Point(247, 16);
+            this.lv.Location = new System.Drawing.Point(250, 16);
             this.lv.Name = "lv";
-            this.lv.Size = new System.Drawing.Size(392, 426);
+            this.lv.Size = new System.Drawing.Size(389, 426);
             this.lv.TabIndex = 7;
             this.lv.UseCompatibleStateImageBehavior = false;
             this.lv.DoubleClick += new System.EventHandler(this.lv_DoubleClick);
             // 
             // splitter1
             // 
-            this.splitter1.Location = new System.Drawing.Point(244, 16);
+            this.splitter1.Location = new System.Drawing.Point(243, 16);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 426);
+            this.splitter1.Size = new System.Drawing.Size(7, 426);
             this.splitter1.TabIndex = 6;
             this.splitter1.TabStop = false;
             // 
-            // tvDirectory
+            // expBrowser
             // 
-            this.tvDirectory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tvDirectory.Dock = System.Windows.Forms.DockStyle.Left;
-            this.tvDirectory.ImageIndex = 0;
-            this.tvDirectory.ImageList = this.ilFileList;
-            this.tvDirectory.Location = new System.Drawing.Point(3, 16);
-            this.tvDirectory.Name = "tvDirectory";
-            this.tvDirectory.SelectedImageIndex = 0;
-            this.tvDirectory.Size = new System.Drawing.Size(241, 426);
-            this.tvDirectory.TabIndex = 1;
-            this.tvDirectory.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tvDirectory_NodeMouseClick);
+            this.expBrowser.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.expBrowser.Dock = System.Windows.Forms.DockStyle.Left;
+            this.expBrowser.Location = new System.Drawing.Point(3, 16);
+            this.expBrowser.Name = "expBrowser";
+            this.expBrowser.SelectedPath = "C:\\Program Files\\Microsoft Visual Studio 9.0\\Common7\\IDE";
+            this.expBrowser.ShowAddressbar = true;
+            this.expBrowser.ShowMyDocuments = true;
+            this.expBrowser.ShowMyFavorites = true;
+            this.expBrowser.ShowMyNetwork = true;
+            this.expBrowser.ShowToolbar = true;
+            this.expBrowser.Size = new System.Drawing.Size(240, 426);
+            this.expBrowser.TabIndex = 8;
+            this.expBrowser.PathChanged += new WindowsExplorer.ExplorerTree.PathChangedEventHandler(this.explorerTree1_PathChanged);
             // 
             // frmSelectBackground
             // 
@@ -115,6 +117,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListView lv;
         private System.Windows.Forms.Splitter splitter1;
-        private System.Windows.Forms.TreeView tvDirectory;
+        private WindowsExplorer.ExplorerTree expBrowser;
     }
 }
