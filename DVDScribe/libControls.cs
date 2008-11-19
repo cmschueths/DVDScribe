@@ -284,13 +284,8 @@ namespace DVDScribe
 
             public override void LauchEditor(Control c) 
             {
-                /*frmTextEditor frmEdit = new frmTextEditor();
-                frmEdit.Location = this.Location;
-                frmEdit.txtText.Font = pFont;
-                frmEdit.txtText.Text = pText;*/
                 pHide = true;
-                this.Editor = new TextEdit(Text,pFont);
-                //this.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.EditorClosed);
+                this.Editor = new TextEdit(Text, pFont, pColor);
                 c.Controls.Add(Editor);
                 Editor.Location = this.Location;
                 editorVisible = true;

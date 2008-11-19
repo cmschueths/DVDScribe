@@ -84,15 +84,16 @@
             // expBrowser
             // 
             this.expBrowser.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.expBrowser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.expBrowser.Dock = System.Windows.Forms.DockStyle.Left;
             this.expBrowser.Location = new System.Drawing.Point(3, 16);
             this.expBrowser.Name = "expBrowser";
-            this.expBrowser.SelectedPath = "C:\\Program Files\\Microsoft Visual Studio 9.0\\Common7\\IDE";
+            this.expBrowser.SelectedPath = "C:\\";
             this.expBrowser.ShowAddressbar = true;
             this.expBrowser.ShowMyDocuments = true;
             this.expBrowser.ShowMyFavorites = true;
             this.expBrowser.ShowMyNetwork = true;
-            this.expBrowser.ShowToolbar = true;
+            this.expBrowser.ShowToolbar = false;
             this.expBrowser.Size = new System.Drawing.Size(240, 426);
             this.expBrowser.TabIndex = 8;
             this.expBrowser.PathChanged += new WindowsExplorer.ExplorerTree.PathChangedEventHandler(this.explorerTree1_PathChanged);
@@ -103,6 +104,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(642, 445);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmSelectBackground";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Select image to LightScribe";

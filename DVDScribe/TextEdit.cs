@@ -14,10 +14,11 @@ namespace DVDScribe
         {
             InitializeComponent();
         }
-        public TextEdit(string Text, Font AFont)
+        public TextEdit(string Text, Font AFont, Color AColor)
             : base()
         {
             InitializeComponent();
+            txtText.ForeColor = AColor;
             txtText.Text = Text;
             txtText.Font = AFont;
             resizeForText();
