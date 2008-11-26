@@ -8,6 +8,7 @@ InstallDir $ProgramFiles\DVDScribe
 	section
 		setOutPath $INSTDIR
 		file ..\DVDScribe\bin\Release\DVDScribe.exe
+		file ..\DVDScribe\bin\Release\WindowsExplorer.dll
 		file ..\doc\ReadMe.txt
 		file ..\doc\ReleaseNotes.txt
 
@@ -25,6 +26,7 @@ InstallDir $ProgramFiles\DVDScribe
 	section "Uninstall"
 		delete $INSTDIR\uninstall.exe
 		delete $INSTDIR\DVDScribe.exe
+		delete $INSTDIR\WindowsExplorer.dll
 		delete $INSTDIR\ReadMe.txt
 		delete $INSTDIR\ReleaseNotes.txt
 		RMDir  $INSTDIR		
