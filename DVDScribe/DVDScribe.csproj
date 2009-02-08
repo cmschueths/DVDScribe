@@ -140,6 +140,7 @@
     <Compile Include="libFile.cs" />
     <Compile Include="libImage.cs" />
     <Compile Include="libLS.cs" />
+    <Compile Include="libRegistry.cs" />
     <Compile Include="LSCover.cs" />
     <Compile Include="NativeCalls.cs" />
     <Compile Include="Program.cs" />

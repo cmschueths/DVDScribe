@@ -140,6 +140,7 @@ namespace DVDScribe
                 cleardsControls();
                 pbxCanvas.Invalidate();
                 CurrentCoverPath = "";
+                pAngle = 0;
             }
         }
 

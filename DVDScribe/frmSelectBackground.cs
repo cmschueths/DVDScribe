@@ -11,6 +11,7 @@ namespace DVDScribe
 {
     public partial class frmSelectBackground : Form
     {
+        private const string CFOLDER_KEY = "LAST_FOLDER";
         public String SelectedFile
         {
             get
@@ -21,7 +22,12 @@ namespace DVDScribe
 
         public frmSelectBackground()
         {
-            InitializeComponent();            
+            InitializeComponent();
+            string lastFolderBrowsed = libRegistry.ReadValue(CFOLDER_KEY);
+            if (lastFolderBrowsed != "")
+            {               
+                expBrowser.setCurrentPath(lastFolderBrowsed);
+            }
         }
 
         private void lv_DoubleClick(object sender, EventArgs e)
@@ -50,6 +56,11 @@ namespace DVDScribe
                 }                                       
             }
             lv.LargeImageList = imgList;
+        }
+
+        private void frmSelectBackground_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            libRegistry.WriteValue(CFOLDER_KEY, expBrowser.SelectedPath);
         }
  
     }

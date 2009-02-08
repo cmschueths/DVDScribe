@@ -88,7 +88,7 @@
             this.expBrowser.Dock = System.Windows.Forms.DockStyle.Left;
             this.expBrowser.Location = new System.Drawing.Point(3, 16);
             this.expBrowser.Name = "expBrowser";
-            this.expBrowser.SelectedPath = "C:\\";
+            this.expBrowser.SelectedPath = "";
             this.expBrowser.ShowAddressbar = true;
             this.expBrowser.ShowMyDocuments = true;
             this.expBrowser.ShowMyFavorites = true;
@@ -107,7 +107,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmSelectBackground";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Select image to LightScribe";
+            this.Text = "Select image to LightScribe";           
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmSelectBackground_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
