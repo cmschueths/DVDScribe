@@ -29,11 +29,16 @@
         private void InitializeComponent()
         {
             ((System.ComponentModel.ISupportInitialize)(this.pbxPreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxOrg)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
             this.groupBox2.Text = "Grayscale";
+            // 
+            // btnOk
+            // 
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // frmGrayscalePreview
             // 
@@ -42,6 +47,7 @@
             this.Name = "frmGrayscalePreview";
             this.Text = "Grayscale preview";
             ((System.ComponentModel.ISupportInitialize)(this.pbxPreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxOrg)).EndInit();
             this.ResumeLayout(false);
 
         }
