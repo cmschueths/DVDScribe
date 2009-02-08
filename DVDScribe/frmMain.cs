@@ -111,7 +111,7 @@ namespace DVDScribe
         private void pbxCanvas_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-
+            
             Bitmap bmp = (BufferImage == null) ? Cover : BufferImage;
 
             Rectangle rect = new Rectangle(StartX, StartY, (int)(Cover.Width * ZoomH), (int)(Cover.Height * ZoomV));
@@ -328,10 +328,12 @@ namespace DVDScribe
 
         private void acnDoGrayScale(object sender, EventArgs e)
         {
-            using (frmGrayscalePreview f = new frmGrayscalePreview(Cover)){
+            Bitmap bmp = (BufferImage == null) ? Cover : BufferImage;
+            using (frmGrayscalePreview f = new frmGrayscalePreview(bmp))
+            {
                 if (f.ShowDialog() == DialogResult.OK)
                 {
-                    libImage.GrayScale(Cover);
+                    libImage.GrayScale(bmp);
                     pbxCanvas.Invalidate();
                 }
             }
@@ -339,9 +341,11 @@ namespace DVDScribe
 
         private void acnDoCiontrastChange(object sender, EventArgs e)
         {
-            using (frmContrastPreview f = new frmContrastPreview(Cover)){
+            Bitmap bmp = (BufferImage == null) ? Cover : BufferImage;
+            using (frmContrastPreview f = new frmContrastPreview(bmp))
+            {
                 if (f.ShowDialog() == DialogResult.OK){
-                    if (libImage.SetContrast(Cover, (sbyte)f.tbLevel.Value))
+                    if (libImage.SetContrast(bmp, (sbyte)f.tbLevel.Value))
                     {
                         pbxCanvas.Invalidate();
                     }
