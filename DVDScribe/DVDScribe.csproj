@@ -60,9 +60,8 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="WindowsExplorer, Version=2.1.0.0, Culture=neutral">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\3rd Party\BetterExplorerTreeview\Explorer Tree\bin\Release\WindowsExplorer.dll</HintPath>
+    <Reference Include="WindowsExplorer">
+      <HintPath>WindowsExplorer.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

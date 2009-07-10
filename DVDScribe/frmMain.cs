@@ -80,7 +80,7 @@ namespace DVDScribe
             InitializeComponent();
             frmSplash frmSplashScreen = new frmSplash();
             //frmSplashScreen.ShowDialog();
-
+           
             dsControls = new List<libControls.dsControl>();
             CurrentMode = Mode.mDrag;
         }
