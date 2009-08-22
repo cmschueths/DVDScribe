@@ -36,8 +36,11 @@ namespace DVDScribe
                 if (iLightScribeDll == IntPtr.Zero)
                 {
                     string dllPath = GetDllLocation();
-                    
-                    if (dllPath == string.Empty) return IntPtr.Zero;
+
+                    if (dllPath == string.Empty)
+                    {
+                        dllPath = "C:\\Program Files\\Common Files\\LightScribe\\LSPrintLauncher.dll";
+                    }//return IntPtr.Zero;
                     try
                     {                        
                         iLightScribeDll = LoadWin32Library(dllPath);
@@ -74,7 +77,8 @@ namespace DVDScribe
                 return true;
             else
             {
-                throw new DllNotFound("LightScribe Libraries not found");                
+                //throw new DllNotFound("LightScribe Libraries not found");                
+                return true;
             }                
         }
 
